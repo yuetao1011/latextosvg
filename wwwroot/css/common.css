@@ -1,0 +1,378 @@
+@charset "UTF-8";
+/**
+ * @Copyright: Copyright © 2019
+ * @Created on 2019-8-22
+ * @Author:Panda_YueTao
+ * @Version 2.00
+ * @Title: OurSite
+ */
+
+/* #region 媒体查询 */
+@media screen and (max-width: 279px) {
+  html {
+    font-size: 3px;
+    /* background-color: red; */
+  }
+}
+@media screen and (min-width: 280px) and (max-width: 349px) {
+  html {
+    font-size: 6px;
+    /* background-color: orange; */
+  }
+}
+@media screen and (min-width: 350px) and (max-width: 575px) {
+  html {
+    font-size: 8px;
+    /* background-color: yellow; */
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  html {
+    font-size: 10px;
+    /* background-color: green; */
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  html {
+    font-size: 12px;
+    /* background-color: lightblue; */
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  html {
+    font-size: 15px;
+    /* background-color: blue; */
+  }
+}
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 16px;
+    /* background-color: blueviolet; */
+  }
+}
+/* #endregion */
+
+/* #region textarea禁止拖动改变大小 */
+textarea {
+  resize: none;
+}
+/* #endregion */
+
+/* #region 图片不可圈选、宽度100% */
+img {
+  width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+/* #endregion */
+
+/* #region禁用bootstrap点击按钮时边框高亮样式 */
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: none;
+  box-shadow: none;
+}
+/* #endregion */
+
+/* #region placeholder字体颜色 */
+.form-control::-webkit-input-placeholder {
+  color: #ddd;
+  opacity: 1;
+}
+
+.form-control::-moz-placeholder {
+  color: #ddd;
+  opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #ddd;
+  opacity: 1;
+}
+
+.form-control::-ms-input-placeholder {
+  color: #ddd;
+  opacity: 1;
+}
+
+.form-control::placeholder {
+  color: #ddd;
+  opacity: 1;
+}
+/* #endregion */
+
+/* #region 对齐 */
+.c {
+  text-align: center;
+}
+
+.l {
+  text-align: left;
+}
+
+.r {
+  text-align: right;
+}
+
+.fleft {
+  float: left;
+}
+
+.fright {
+  float: right;
+}
+
+/* #endregion */
+
+/* #region tooltip泡泡 */
+.tippy-box[data-theme~="mythem"] {
+  background-color: #000;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.tippy-box[data-theme~="mythem"][data-placement^="top"] > .tippy-arrow::before {
+  border-right-color: #000;
+  opacity: 0.7;
+}
+.tippy-box[data-theme~="mythem"][data-placement^="right"] > .tippy-arrow::before {
+  border-right-color: #000;
+  opacity: 0.7;
+}
+.tippy-box[data-theme~="mythem"][data-placement^="bottom"] > .tippy-arrow::before {
+  border-right-color: #000;
+  opacity: 0.7;
+}
+.tippy-box[data-theme~="mythem"][data-placement^="left"] > .tippy-arrow::before {
+  border-right-color: #000;
+  opacity: 0.7;
+}
+/* #endregion */
+
+/* #region 页脚 */
+#footer {
+  margin-top: 8rem;
+}
+#footer .contractme a {
+  color: #000;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin: auto 1rem auto 1rem;
+  opacity: 0.4;
+}
+#footer .contractme a img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+#wrap_wechat {
+  display: inline-block;
+  position: relative;
+}
+#eqcode_wechat {
+  visibility: hidden;
+  position: absolute;
+  top: -10rem;
+  left: -3.2rem;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+#eqcode_wechat img {
+  width: 10rem;
+  height: 10rem;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -khtml-user-select: auto;
+  -ms-user-select: auto;
+}
+#footer .copyright {
+  opacity: 0.5;
+  margin-top: 1rem;
+}
+#footer .copyright p {
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+/* #endregion */
+
+/* #region 弹出框 */
+.qback {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999999999999999999;
+}
+.alertBox {
+  width: 452px;
+  height: auto;
+  padding: 0 15px 20px 15px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 8px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin: -167px 0 0 -226px;
+  box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.alertHead {
+  width: 100%;
+  height: 45px;
+  border-bottom: 1px solid #99bafa;
+  font-size: 18px;
+  color: #333;
+  line-height: 45px;
+  text-align: left;
+}
+.alertMes {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 25px 40px 35px;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  box-sizing: border-box;
+  line-height: 28px;
+}
+.alertBtn {
+  display: block;
+  width: 100px;
+  height: 34px;
+  line-height: 34px;
+  background-color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  margin: 0 auto;
+  text-align: center;
+}
+.ConBtn {
+  display: inline-block;
+  width: 100px;
+  height: 34px;
+  font-size: 15px;
+  text-align: center;
+  margin-left: 84px;
+  margin-right: 47px;
+  padding-bottom: 0.2rem auto;
+}
+.cancel {
+  display: inline-block;
+  width: 100px;
+  height: 34px;
+  font-size: 15px;
+  text-align: center;
+  padding-bottom: 0.2rem auto;
+}
+.ToastBox {
+  width: 452px;
+  height: auto;
+  padding: 15px 20px;
+  text-align: center;
+  /* background: rgba(0, 0, 0, 0.4); */
+  /* color: #fff; */
+  font-size: 16px;
+  border-radius: 8px;
+  line-height: 24px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin: 0px 0px 0px -226px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+.ToastBox-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+.ToastBox-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+.ToastBox-warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+.ToastBox-info {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}
+
+/* #endregion */
+
+/* #region 半屏模态框 */
+.screenmodal {
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  left: -80%;
+  background: white;
+  top: 0;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s;
+}
+.screenmodal.screenmodal-open {
+  left: 0;
+}
+.screenmodal-mask {
+  display: none;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 500;
+}
+.screenmodal .backtop {
+  position: fixed;
+  bottom: 50px;
+  height: 3rem;
+  width: 3rem;
+  text-align: center;
+  background-color: #007bff;
+  border-radius: 3px;
+  overflow: hidden;
+  z-index: 1002;
+  font-size: 2rem;
+  color: white;
+  visibility: hidden;
+}
+.backtop-open {
+  right: 35%;
+  transition: all 0.4s;
+}
+.backtop-close {
+  right: 110%;
+  transition: all 0.4s;
+}
+.screenmodal .backtop:hover {
+  background-color: white;
+  color: #007bff;
+  border: 2px solid #007bff;
+}
+.screenmodal .backtop i {
+  margin: 0;
+  padding: 0;
+}
+
+/* #endregion */

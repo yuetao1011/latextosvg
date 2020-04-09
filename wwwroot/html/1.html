@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8" />
+    <title>妈叔出品-LaTeX公式编辑器</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="简约的，即时渲染的，多终端的，基于MathJax实现的在线LaTeX编辑器" />
+    <meta name="keywords" content="免费,LaTeX,LaTeX公式编辑,公式编辑,公式编辑器,在线公式编辑,在线LaTeX,好用的公式编辑,手机版公式编辑,移动版公式编辑,手机LaTeX" />
+    <meta name="author" content="PandaHero, yuetao_1011@outlook.com" />
+    <meta name="copyright" content="妈咪说（北京）科技传媒有限公司,熊猫大侠" />
+    <meta name="renderer" content="webkit" />
+    <meta name="robots" content="all" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="shortcut icon" href="https://oursite-resourse.oss-cn-qingdao.aliyuncs.com/formula-images/favicon.png"
+        type="image/x-icon" />
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/formula.css" />
+</head>
+
+<body>
+
+    <!-- #region 页眉 -->
+    <div class="full" id="header">
+        <div class="container">
+            <h1>LaTeX公式编辑器</h1>
+            <div class="row">
+                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                    <p class="sectitle">Convert LaTeX equations to SVG using MathJax</p>
+                </div>
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 wrap-btn">
+                    <button type="button" class="btn btn-light btn-lg" id="btn_setting"><i
+                            class="fa fa-cog"></i>设置</button>
+                    <button type="button" class="btn btn-light btn-lg" id="btn_help"><i
+                            class="fa fa-info-circle"></i>帮助</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region 输入区域 -->
+    <div class="container area" id="input-area">
+        <div class="card">
+            <div class="card-header">
+                <h2><i class="fa fa-edit"></i>输入区域<span>Input</span></h2>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="##" id="a_toolbar">快捷工具栏</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="##" id="a_templates">公式模板</a>
+                        </li>
+                    </ul>
+                    <div id="wrap_toolbar"></div>
+                    <div id="wrap_templates"></div>
+                </div>
+                <div class="form-group" id="control-bar">
+                    <div class="dropdown wrap-control">
+                        <button class="btn btn-light" type="button" data-toggle="dropdown" id="btn_color"><i
+                                class="fa fa-paint-brush"></i>颜色</button>
+                        <div class="dropdown-menu" id="wrap_color"></div>
+                    </div>
+                    <div class="dropdown wrap-control">
+                        <button class="btn btn-light" type="button" data-toggle="dropdown" id="btn_fontfamily"><i
+                                class="fa fa-font"></i>字体</button>
+                        <div class="dropdown-menu" id="wrap_fontfamily"></div>
+                    </div>
+                    <div class="dropdown wrap-control">
+                        <button class="btn btn-light" type="button" data-toggle="dropdown" id="btn_fontsize"><i
+                                class="fa fa-text-height"></i>字号</button>
+                        <div class="dropdown-menu" id="wrap_fontsize"></div>
+                    </div>
+                    <button class="btn btn-light fright" type="button" id="btn_array">array</button>
+                    <button class="btn btn-light fright" type="button" id="btn_align">align</button>
+                    <button class="btn btn-light fright" type="button" id="btn_eqnarray">eqnarray</button>
+                    <button class="btn btn-light fright" type="button" id="btn_equation">clear</button>
+                </div>
+                <div class="form-group">
+                    <textarea id="txta_input" class="form-control" rows="6" placeholder="请输入您的Latex表达式"
+                        maxlength="65536"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region 输出区域  -->
+    <div class="container area" id="output-area">
+        <div class="card">
+            <div class="card-header">
+                <h2><i class="fa fa-arrow-circle-down"></i>&nbsp;输出区域<span>Output</span></h2>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <div id="wrap_output" class="output"></div>
+                </div>
+                <div class="right">
+                    <button type="button" class="btn btn-outline-primary" id="btn_svg">
+                        <span><i class="fa fa-download"></i></span>.svg
+                    </button>
+                    <button type="button" class="btn btn-outline-primary primary" id="btn_png"><i
+                            class="fa fa-download"></i>.png</button>
+                    <button type="button" class="btn btn-outline-primary" id="btn_mathml"><i
+                            class="fa fa-copy"></i>MathML</button>
+                    <button type="button" class="btn btn-outline-primary" id="btn_svg_copy"><i
+                            class="fa fa-copy"></i>SVGCode</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region 模态框 -->
+    <div class="modal fade" id="modal_matrix" tabindex="-1" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal_matrixLabel"><i class="fa fa-hand-o-up"
+                            aria-hidden="true"></i>请选择您的矩阵模板</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="modal_row">请输入矩阵行数</label>
+                        <input class="form-control" id="modal_row" />
+                    </div>
+                    <div class="form-group">
+                        <label for="modal_col">请输入矩阵列数</label>
+                        <input class="form-control" id="modal_col" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="btn_modal_enter">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region 侧边栏 -->
+
+    <!-- #endregion  -->
+
+    <!-- #region 页脚 -->
+    <div class="full center" id="footer">
+        <div class="container">
+            <div class="contractme">
+                <a href="mailto:yuetao_1011@outlook.com"><i class="fa fa-envelope"></i></a>
+                <a href="https://weibo.com/mommytalkshow" target="_blank"><i class="fa fa-weibo"></i> </a>
+                <div id="wrap_wechat">
+                    <a href="##" id="a_wechat">
+                        <i class="fa fa-wechat"></i>
+                    </a>
+                    <div id="eqcode_wechat">
+                        <img src="https://oursite-resourse.oss-cn-qingdao.aliyuncs.com/public-images/wechat.png"
+                            id="img_eqcode" />
+                    </div>
+                </div>
+                <a href="https://space.bilibili.com/223146252" target="_blank"><img
+                        src="https://oursite-resourse.oss-cn-qingdao.aliyuncs.com/public-images/bilibili.svg" /></a>
+                <a href="https://www.youtube.com/channel/UCLROLAN8kmU7tGQDs6KH-bQ?view_as=subscriber" target="_blank"><i
+                        class="fa fa-youtube"></i></a>
+            </div>
+            <div class="copyright">
+                <p>Copyright &copy; 2019 妈咪说（北京）科技传媒有限公司 All Rights Reserved&nbsp;&nbsp;ver:1.2.1.190523_beta</p>
+                <a href="http://www.beian.miit.gov.cn" target="_blank">
+                    <p>京ICP备19015398号-1</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region 脚本引用 -->
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script
+        src="https://oursite-resourse.oss-cn-qingdao.aliyuncs.com/public-static-script/tippy/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/tippy.js/6.1.0/tippy-bundle.umd.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/formula.js"></script>
+
+
+    <!-- #endregion -->
+
+    <script>
+
+        $(function () {
+            paint();
+        });
+
+        var toolbar1 = {
+            path: MyCommon.fd.OSSPath + "/formula-images/toolbar1/",
+            cont: [
+                { simple: "symbol", name: "symbol.png", descript: "常用符号" },
+                { simple: "greek", name: "greek.png", descript: "希腊字母" },
+                { simple: "frac", name: "frac.png", descript: "分数微分" },
+                { simple: "sqrt", name: "sqrt.png", descript: "根式角标" },
+                { simple: "limit", name: "limit.png", descript: "极限对数" },
+                { simple: "trig", name: "trig.png", descript: "三角函数" },
+                { simple: "integral", name: "integral.png", descript: "积分运算" },
+                { simple: "sum", name: "sum.png", descript: "大型运算" },
+                { simple: "bracket", name: "bracket.png", descript: "括号取整" },
+                { simple: "matrix", name: "matrix.png", descript: "数组矩阵" }
+            ]
+        };
+
+
+        function paint() {
+            let toolbar = document.getElementById('wrap_toolbar');
+            let wrap = document.createElement('div');
+            wrap.style.display = 'flex';
+            wrap.style.flexDirection = 'row';
+            wrap.style.flexWrap = 'nowrap';
+            wrap.style.justifyContent = 'space-around';
+            wrap.style.alignItems = 'center';
+            for (let i = 0; i < toolbar1.cont.length; i++) {
+                let btn = document.createElement('button');
+                btn.className = "btn btn-light";
+                btn.type = "button";
+                btn.style.padding = "0.5rem";
+                btn.style.margin = "0.5rem";
+                if (i == 0) { btn.style.marginLeft = "0" };
+                if (i == 10 - 1) { btn.style.marginRight = "0" };
+                btn.style.order = i;
+                btn.style.flexGrow = 0;
+                let img = document.createElement("img");
+                img.src = toolbar1.path + toolbar1.cont[i].name;
+                let p = document.createElement("p");
+                p.style.fontSize = "0.7rem";
+                p.style.margin = "0 auto 0.2rem auto";
+                p.innerHTML=toolbar1.cont[i].descript;
+                let arrow = document.createElement("div");
+                arrow.style.margin = "-0.3rem auto -0.4rem auto";
+                arrow.style.fontSize = "1rem";
+                arrow.innerHTML = "<i class='fa fa-caret-down'></i>";
+                toolbar.appendChild(wrap);
+                wrap.appendChild(btn);
+                btn.appendChild(img);
+                btn.appendChild(p);
+                p.appendChild(arrow);
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

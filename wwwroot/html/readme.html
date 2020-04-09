@@ -1,0 +1,4099 @@
+<div class="backtop backtop-close">
+    <i class="fa fa-chevron-up"></i>
+</div>
+<h2>使用文档 Documentation</h2>
+<h3>目录 Contents</h3>
+<div id="toc-doc">[TOC]</div>
+<h3>1 关于LaTeX公式编辑 Introduce</h3>
+<p><strong>LaTeX</strong>（常被读作/ˈlɑːtɛk/或/ˈleɪtɛk/，正确读音:/ˈlɑːtɛx/音译：拉泰赫，写作 $\LaTeX$），是一种基于TeX的排版系统，由美国计算机科学家<a
+        href="https://zh.wikipedia.org/wiki/%E8%8E%B1%E6%96%AF%E5%88%A9%C2%B7%E5%85%B0%E6%B3%A2%E7%89%B9">莱斯利·兰伯特</a>在20世纪80年代初期开发。
+    <strong>MathJax</strong>是一个跨浏览器的JavaScript库，它使用MathML、LaTeX和ASCIIMathML标记在Web浏览器中显示数学符号。 本页面是基于<a
+        href="https://www.mathjax.org/">MathJax</a>实现的便捷LaTeX公式编辑器，支持导出SVG矢量图、高清PNG位图、MathML代码以及SVGCode，并且可根据需要自定义加载TeX扩展包，实现功能拓展。
+</p>
+<h4>1.1 基本使用 Basic</h4>
+<p>在本页面输入框中输入的公式<strong>不用</strong>放在<code>&lt;math&gt;</code>与<code>&lt;/math&gt;</code>，或<code>$</code>与<code>$</code>之间，直接输入相关LaTeX代码即可。
+</p>
+<p>在输出框您可以看到即时渲染出来效果，方便进行代码修改。</p>
+<p>以下字符在LaTeX环境中是保留字符，它们具有特殊含义，只可以特定语法中起作用，所以并不能在输入框中直接输入它们（会报错或者不会渲染）</p>
+<pre><code># % ^ &amp; _ { } ~ \
+  </code></pre>
+<p>如您因其他原因需要直接显示它们，请在其前面加入<code>\</code> 反斜杠或其它转义符。</p>
+<pre><code>\# \% ^\wedge \&amp; \_ \{ \} \sim \backslash
+  </code></pre>
+<div>$$ \# \% ^\wedge \&amp; \_ \{ \} \sim \backslash $$</div>
+<p>关于LaTeX代码部分请参考下一章节。</p>
+<p><strong>注意：</strong>本页面不支持文档编辑环境，因此不支持调用<code>\document</code>等相关命令，默认即为数学环境，可直接输入数学公式。</p>
+<h4>1.2 关于渲染 Render</h4>
+<p>本页面采用MathJax-tex-svg显示数学符号，支持四种格式导出。</p>
+<h5>1.2.1 导出SVG</h5>
+<p>SVG全称<strong>S</strong>calable <strong>V</strong>ector
+    <strong>G</strong>raphics（可缩放矢量图形），是一种基于可扩展标记语言（XML），用于描述二维矢量图形的图形格式，标准由W3C制定，是一个开放标准。</p>
+<p>我们可以简单理解为，SVG是一种与图像分辨率无关的矢量格式的拓展名，因此SVG文件可以直接拖入<strong>AI、PS</strong>等绘图软件中进行相应编辑、修改，以满足任意尺寸需求。</p>
+<h5>1.2.2 导出PNG</h5>
+<p>PNG全称<strong>P</strong>ortable <strong>N</strong>etwork
+    <strong>G</strong>raphics（便携式网络图形），是一种无损压缩的<strong>位图</strong>图形格式。</p>
+<p>因此PNG与图像分辨率有关，本页面导出的PNG分辨率为4K标准（3840x2160），也可以满足绝大部分的文档需求。</p>
+<h5>1.2.3 导出MathML</h5>
+<p>MathML全称<strong>Math</strong>ematical <strong>M</strong>arkup
+    <strong>L</strong>anguage（数学标记语言），是一种基于可扩展标记语言（XML）的标准，用来描述数学符号和公式。现已获得<strong>HTML5</strong>和大部分<strong>办公软件</strong>与<strong>数学软件</strong>的支持，例如Microsoft
+    Office、LibreOffice、Mathematica、Maple等，这意味着，您只需将<strong>MathML代码</strong>复制进Microsoft
+    Word当中，便会自动转换成Word支持的LaTeX公式，并可进行相应后续编辑。</p>
+<h5>1.2.4 导出SVG Code（说不明白）</h5>
+<p>SVGCode即是一个SVG文件的全部代码，此支持HTML环境。</p>
+<p>&nbsp;</p>
+<h3>2 数学公式编辑 Displaying a formula</h3>
+<h4>2.1 符号与字母 Symbol and Alphabet</h4>
+<h5>2.1.1 希腊字母 Greek alphabet</h5>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="c">序号</th>
+                <th class="c">小写</th>
+                <th class="l">LaTeX</th>
+                <th class="l">读音</th>
+                <th class="c">序号</th>
+                <th class="c">大写</th>
+                <th class="l">LaTeX</th>
+                <th class="l">读音</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="c">1</td>
+                <td class="c">$\alpha$</td>
+                <td class="l">\alpha</td>
+                <td class="l">/ˈælfə/</td>
+                <td class="c">31</td>
+                <td class="c">$\Gamma$</td>
+                <td class="l">\Gamma</td>
+                <td class="l">/ˈɡæmə/</td>
+            </tr>
+            <tr>
+                <td class="c">2</td>
+                <td class="c">$\beta$</td>
+                <td class="l">\beta</td>
+                <td class="l">/ˈbiːtə/, US: /ˈbeɪtə/</td>
+                <td class="c">32</td>
+                <td class="c">$\Delta$</td>
+                <td class="l">\Delta</td>
+                <td class="l">/ˈdɛltə/</td>
+            </tr>
+            <tr>
+                <td class="c">3</td>
+                <td class="c">$\gamma$</td>
+                <td class="l">\gamma</td>
+                <td class="l">/ˈɡæmə/</td>
+                <td class="c">33</td>
+                <td class="c">$\Theta$</td>
+                <td class="l">\Theta</td>
+                <td class="l">/ˈθiːtə/</td>
+            </tr>
+            <tr>
+                <td class="c">4</td>
+                <td class="c">$\delta$</td>
+                <td class="l">\delta</td>
+                <td class="l">/ˈdɛltə/</td>
+                <td class="c">34</td>
+                <td class="c">$\Lambda$</td>
+                <td class="l">\Lambda</td>
+                <td class="l">/ˈlæmdə/</td>
+            </tr>
+            <tr>
+                <td class="c">5</td>
+                <td class="c">$\epsilon$</td>
+                <td class="l">\epsilon</td>
+                <td class="l">/ˈɛpsɪlɒn/</td>
+                <td class="c">35</td>
+                <td class="c">$\Xi$</td>
+                <td class="l">\Xi</td>
+                <td class="l">/zaɪ, ksaɪ/</td>
+            </tr>
+            <tr>
+                <td class="c">6</td>
+                <td class="c">$\varepsilon$</td>
+                <td class="l">\varepsilon</td>
+                <td class="l">/ˈɛpsɪlɒn/</td>
+                <td class="c">36</td>
+                <td class="c">$\Pi$</td>
+                <td class="l">\Pi</td>
+                <td class="l">/paɪ/</td>
+            </tr>
+            <tr>
+                <td class="c">7</td>
+                <td class="c">$\zeta$</td>
+                <td class="l">\zeta</td>
+                <td class="l">/ˈzeɪtə/</td>
+                <td class="c">37</td>
+                <td class="c">$\Sigma$</td>
+                <td class="l">\Sigma</td>
+                <td class="l">/ˈsɪɡmə/</td>
+            </tr>
+            <tr>
+                <td class="c">8</td>
+                <td class="c">$\eta$</td>
+                <td class="l">\eta</td>
+                <td class="l">/ˈeɪtə/</td>
+                <td class="c">38</td>
+                <td class="c">$\Upsilon$</td>
+                <td class="l">\Upsilon</td>
+                <td class="l">/ˈʌpsɪlɒn/</td>
+            </tr>
+            <tr>
+                <td class="c">9</td>
+                <td class="c">$\theta$</td>
+                <td class="l">\theta</td>
+                <td class="l">/ˈθiːtə/</td>
+                <td class="c">39</td>
+                <td class="c">$\Phi$</td>
+                <td class="l">\Phi</td>
+                <td class="l">/faɪ/</td>
+            </tr>
+            <tr>
+                <td class="c">10</td>
+                <td class="c">$\vartheta$</td>
+                <td class="l">\vartheta</td>
+                <td class="l">/ˈθiːtə/</td>
+                <td class="c">40</td>
+                <td class="c">$\Psi$</td>
+                <td class="l">\Psi</td>
+                <td class="l">/psaɪ/</td>
+            </tr>
+            <tr>
+                <td class="c">11</td>
+                <td class="c">$\iota$</td>
+                <td class="l">\iota</td>
+                <td class="l">/aɪˈoʊtə/</td>
+                <td class="c">41</td>
+                <td class="c">$\Omega$</td>
+                <td class="l">\Omega</td>
+                <td class="l">/oʊˈmeɪɡə/</td>
+            </tr>
+            <tr>
+                <td class="c">12</td>
+                <td class="c">$\kappa$</td>
+                <td class="l">\kappa</td>
+                <td class="l">/ˈkæpə/</td>
+                <td class="c">&nbsp;</td>
+                <td class="c">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="c">13</td>
+                <td class="c">$\lambda$</td>
+                <td class="l">\lambda</td>
+                <td class="l">/ˈlæmdə/</td>
+                <td class="c">&nbsp;</td>
+                <td class="c">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="c">14</td>
+                <td class="c">$\mu$</td>
+                <td class="l">\mu</td>
+                <td class="l">/mjuː/</td>
+                <td class="c">&nbsp;</td>
+                <td class="c">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="c">15</td>
+                <td class="c">$\nu$</td>
+                <td class="l">\nu</td>
+                <td class="l">/njuː/</td>
+                <td class="c">&nbsp;</td>
+                <td class="c">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="c">16</td>
+                <td class="c">$\xi$</td>
+                <td class="l">\xi</td>
+                <td class="l">/zaɪ, ksaɪ/</td>
+                <td class="c">&nbsp;</td>
+                <td class="c">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="c">17</td>
+                <td class="c">$o$</td>
+                <td class="l">o</td>
+                <td class="l">/ˈɒmɪkrɒn/</td>
+                <td class="c">&nbsp;</td>
+                <td class="c">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="c">18</td>
+                <td class="c">$\pi$</td>
+                <td class="l">\pi</td>
+                <td class="l">/paɪ/</td>
+                <td class="c">&nbsp;</td>
+                <td class="c">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="c">19</td>
+                <td class="c">$\varpi$</td>
+                <td class="l">\varpi</td>
+                <td class="l">/paɪ/</td>
+                <td class="c">&nbsp;</td>
+                <td class="c">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="c">20</td>
+                <td class="c">$\rho$</td>
+                <td class="l">\rho</td>
+                <td class="l">/roʊ/</td>
+                <td class="c">&nbsp;</td>
+                <td class="c">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="c">21</td>
+                <td class="c">$\varrho$</td>
+                <td class="l">\varrho</td>
+                <td class="l">/roʊ/</td>
+                <td class="c">&nbsp;</td>
+                <td class="c">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="c">22</td>
+                <td class="c">$\sigma$</td>
+                <td class="l">\sigma</td>
+                <td class="l">/ˈsɪɡmə/</td>
+                <td class="c">&nbsp;</td>
+                <td class="c">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="c">23</td>
+                <td class="c">$\varsigma$</td>
+                <td class="l">\varsigma</td>
+                <td class="l">/ˈsɪɡmə/</td>
+                <td class="c">&nbsp;</td>
+                <td class="c">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="c">24</td>
+                <td class="c">$\tau$</td>
+                <td class="l">\tau</td>
+                <td class="l">/taʊ, tɔː/</td>
+                <td class="c">&nbsp;</td>
+                <td class="c">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="c">25</td>
+                <td class="c">$\upsilon$</td>
+                <td class="l">\upsilon</td>
+                <td class="l">/ˈʌpsɪlɒn/</td>
+                <td class="c">&nbsp;</td>
+                <td class="c">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="c">26</td>
+                <td class="c">$\phi$</td>
+                <td class="l">\phi</td>
+                <td class="l">/faɪ/</td>
+                <td class="c">&nbsp;</td>
+                <td class="c">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="c">27</td>
+                <td class="c">$\varphi$</td>
+                <td class="l">\varphi</td>
+                <td class="l">/faɪ/</td>
+                <td class="c">&nbsp;</td>
+                <td class="c">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="c">28</td>
+                <td class="c">$\chi$</td>
+                <td class="l">\chi</td>
+                <td class="l">/kaɪ/</td>
+                <td class="c">&nbsp;</td>
+                <td class="c">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="c">29</td>
+                <td class="c">$\psi$</td>
+                <td class="l">\psi</td>
+                <td class="l">/psaɪ/</td>
+                <td class="c">&nbsp;</td>
+                <td class="c">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="c">30</td>
+                <td class="c">$\omega$</td>
+                <td class="l">\omega</td>
+                <td class="l">/oʊˈmeɪɡə/</td>
+                <td class="c">&nbsp;</td>
+                <td class="c">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<p><strong>注意:</strong>
+    MathJax支持的大写希腊字母有限，如需其他（如大写Alpha），可使用<strong>罗马体</strong>转换，如<code>\mathrm{A}</code>表示大写Alpha：$\mathrm{A}$。</p>
+<h5>2.1.2 希伯来字母 Hebrew alphabet</h5>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="c">序号</th>
+                <th class="c">图标</th>
+                <th class="l">LaTeX</th>
+                <th class="l">英文</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="c">1</td>
+                <td class="c">$\aleph$</td>
+                <td class="l">\aleph</td>
+                <td class="l">aleph</td>
+            </tr>
+            <tr>
+                <td class="c">2</td>
+                <td class="c">$\beth$</td>
+                <td class="l">\beth</td>
+                <td class="l">beth</td>
+            </tr>
+            <tr>
+                <td class="c">3</td>
+                <td class="c">$\gimel$</td>
+                <td class="l">\gimel</td>
+                <td class="l">gimel</td>
+            </tr>
+            <tr>
+                <td class="c">4</td>
+                <td class="c">$\daleth$</td>
+                <td class="l">\daleth</td>
+                <td class="l">daleth</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<h5>2.1.3 二元运算符 Binary operations</h5>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="c">序号</th>
+                <th class="c">图标</th>
+                <th class="l">LaTeX</th>
+                <th class="c">序号</th>
+                <th class="c">图标</th>
+                <th class="l">LaTeX</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="c">1</td>
+                <td class="c">$+$</td>
+                <td class="l">+</td>
+                <td class="c">20</td>
+                <td class="c">$\bullet$</td>
+                <td class="l">\bullet</td>
+            </tr>
+            <tr>
+                <td class="c">2</td>
+                <td class="c">$-$</td>
+                <td class="l">-</td>
+                <td class="c">21</td>
+                <td class="c">$\oplus$</td>
+                <td class="l">\oplus</td>
+            </tr>
+            <tr>
+                <td class="c">3</td>
+                <td class="c">$\times$</td>
+                <td class="l">\times</td>
+                <td class="c">22</td>
+                <td class="c">$\ominus$</td>
+                <td class="l">\ominus</td>
+            </tr>
+            <tr>
+                <td class="c">4</td>
+                <td class="c">$\div$</td>
+                <td class="l">\div</td>
+                <td class="c">23</td>
+                <td class="c">$\odot$</td>
+                <td class="l">\odot</td>
+            </tr>
+            <tr>
+                <td class="c">5</td>
+                <td class="c">$\pm$</td>
+                <td class="l">\pm</td>
+                <td class="c">24</td>
+                <td class="c">$\oslash$</td>
+                <td class="l">\oslash</td>
+            </tr>
+            <tr>
+                <td class="c">6</td>
+                <td class="c">$\mp$</td>
+                <td class="l">\mp</td>
+                <td class="c">25</td>
+                <td class="c">$\otimes$</td>
+                <td class="l">\otimes</td>
+            </tr>
+            <tr>
+                <td class="c">7</td>
+                <td class="c">$\triangleleft$</td>
+                <td class="l">\triangleleft</td>
+                <td class="c">26</td>
+                <td class="c">$\bigcirc$</td>
+                <td class="l">\bigcirc</td>
+            </tr>
+            <tr>
+                <td class="c">8</td>
+                <td class="c">$\triangleright$</td>
+                <td class="l">\triangleright</td>
+                <td class="c">27</td>
+                <td class="c">$\diamond$</td>
+                <td class="l">\diamond</td>
+            </tr>
+            <tr>
+                <td class="c">9</td>
+                <td class="c">$\cdot$</td>
+                <td class="l">\cdot</td>
+                <td class="c">28</td>
+                <td class="c">$\uplus$</td>
+                <td class="l">\uplus</td>
+            </tr>
+            <tr>
+                <td class="c">10</td>
+                <td class="c">$\setminus$</td>
+                <td class="l">\setminus</td>
+                <td class="c">29</td>
+                <td class="c">$\bigtriangleup$</td>
+                <td class="l">\bigtriangleup</td>
+            </tr>
+            <tr>
+                <td class="c">11</td>
+                <td class="c">$\star$</td>
+                <td class="l">\star</td>
+                <td class="c">30</td>
+                <td class="c">$\bigtriangledown$</td>
+                <td class="l">\bigtriangledown</td>
+            </tr>
+            <tr>
+                <td class="c">12</td>
+                <td class="c">$\ast$</td>
+                <td class="l">\ast</td>
+                <td class="c">31</td>
+                <td class="c">$\lhd$</td>
+                <td class="l">\lhd</td>
+            </tr>
+            <tr>
+                <td class="c">13</td>
+                <td class="c">$\cup$</td>
+                <td class="l">\cup</td>
+                <td class="c">32</td>
+                <td class="c">$\rhd$</td>
+                <td class="l">\rhd</td>
+            </tr>
+            <tr>
+                <td class="c">14</td>
+                <td class="c">$\cap$</td>
+                <td class="l">\cap</td>
+                <td class="c">33</td>
+                <td class="c">$\unlhd$</td>
+                <td class="l">\unlhd</td>
+            </tr>
+            <tr>
+                <td class="c">15</td>
+                <td class="c">$\sqcup$</td>
+                <td class="l">\sqcup</td>
+                <td class="c">34</td>
+                <td class="c">$\unrhd$</td>
+                <td class="l">\unrhd</td>
+            </tr>
+            <tr>
+                <td class="c">16</td>
+                <td class="c">$\sqcap$</td>
+                <td class="l">\sqcap</td>
+                <td class="c">35</td>
+                <td class="c">$\amalg$</td>
+                <td class="l">\amalg</td>
+            </tr>
+            <tr>
+                <td class="c">17</td>
+                <td class="c">$\vee$</td>
+                <td class="l">\vee</td>
+                <td class="c">36</td>
+                <td class="c">$\wr$</td>
+                <td class="l">\wr</td>
+            </tr>
+            <tr>
+                <td class="c">18</td>
+                <td class="c">$\wedge$</td>
+                <td class="l">\wedge</td>
+                <td class="c">37</td>
+                <td class="c">$\dagger$</td>
+                <td class="l">\dagger</td>
+            </tr>
+            <tr>
+                <td class="c">19</td>
+                <td class="c">$\circ$</td>
+                <td class="l">\circ</td>
+                <td class="c">38</td>
+                <td class="c">$\ddagger$</td>
+                <td class="l">\ddagger</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<h5>2.1.4 二元关系符 Binary relations</h5>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="c">序号</th>
+                <th class="c">图标</th>
+                <th class="l">LaTeX</th>
+                <th class="c">序号</th>
+                <th class="c">图标</th>
+                <th class="l">LaTeX</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="c">1</td>
+                <td class="c">$=$</td>
+                <td class="l">=</td>
+                <td class="c">49</td>
+                <td class="c">$\gneq$</td>
+                <td class="l">\gneq</td>
+            </tr>
+            <tr>
+                <td class="c">2</td>
+                <td class="c">$\ne$</td>
+                <td class="l">\ne</td>
+                <td class="c">50</td>
+                <td class="c">$\geqq$</td>
+                <td class="l">\geqq</td>
+            </tr>
+            <tr>
+                <td class="c">3</td>
+                <td class="c">$\neq$</td>
+                <td class="l">\neq</td>
+                <td class="c">51</td>
+                <td class="c">$\ngeq$</td>
+                <td class="l">\ngeq</td>
+            </tr>
+            <tr>
+                <td class="c">4</td>
+                <td class="c">$\equiv$</td>
+                <td class="l">\equiv</td>
+                <td class="c">52</td>
+                <td class="c">$\ngeqq$</td>
+                <td class="l">\ngeqq</td>
+            </tr>
+            <tr>
+                <td class="c">5</td>
+                <td class="c">$\not\equiv$</td>
+                <td class="l">\not\equiv</td>
+                <td class="c">53</td>
+                <td class="c">$\gneqq$</td>
+                <td class="l">\gneqq</td>
+            </tr>
+            <tr>
+                <td class="c">6</td>
+                <td class="c">$\doteq$</td>
+                <td class="l">\doteq</td>
+                <td class="c">54</td>
+                <td class="c">$\gvertneqq$</td>
+                <td class="l">\gvertneqq</td>
+            </tr>
+            <tr>
+                <td class="c">7</td>
+                <td class="c">$\doteqdot$</td>
+                <td class="l">\doteqdot</td>
+                <td class="c">55</td>
+                <td class="c">$\lessgtr$</td>
+                <td class="l">\lessgtr</td>
+            </tr>
+            <tr>
+                <td class="c">8</td>
+                <td class="c">$\overset{\underset{\mathrm{def}}{}}{=}$</td>
+                <td class="l">\overset{\underset{\mathrm{def}}{}}{=}</td>
+                <td class="c">56</td>
+                <td class="c">$\lesseqgtr$</td>
+                <td class="l">\lesseqgtr</td>
+            </tr>
+            <tr>
+                <td class="c">9</td>
+                <td class="c">$:=$</td>
+                <td class="l">:=</td>
+                <td class="c">57</td>
+                <td class="c">$\lesseqqgtr$</td>
+                <td class="l">\lesseqqgtr</td>
+            </tr>
+            <tr>
+                <td class="c">10</td>
+                <td class="c">$\sim$</td>
+                <td class="l">\sim</td>
+                <td class="c">58</td>
+                <td class="c">$\gtrless$</td>
+                <td class="l">\gtrless</td>
+            </tr>
+            <tr>
+                <td class="c">11</td>
+                <td class="c">$\nsim$</td>
+                <td class="l">\nsim</td>
+                <td class="c">59</td>
+                <td class="c">$\gtreqless$</td>
+                <td class="l">\gtreqless</td>
+            </tr>
+            <tr>
+                <td class="c">12</td>
+                <td class="c">$\backsim$</td>
+                <td class="l">\backsim</td>
+                <td class="c">60</td>
+                <td class="c">$\gtreqqless$</td>
+                <td class="l">\gtreqqless</td>
+            </tr>
+            <tr>
+                <td class="c">13</td>
+                <td class="c">$\thicksim$</td>
+                <td class="l">\thicksim</td>
+                <td class="c">61</td>
+                <td class="c">$\leqslant$</td>
+                <td class="l">\leqslant</td>
+            </tr>
+            <tr>
+                <td class="c">14</td>
+                <td class="c">$\simeq$</td>
+                <td class="l">\simeq</td>
+                <td class="c">62</td>
+                <td class="c">$\nleqslant$</td>
+                <td class="l">\nleqslant</td>
+            </tr>
+            <tr>
+                <td class="c">15</td>
+                <td class="c">$\backsimeq$</td>
+                <td class="l">\backsimeq</td>
+                <td class="c">63</td>
+                <td class="c">$\eqslantless$</td>
+                <td class="l">\eqslantless</td>
+            </tr>
+            <tr>
+                <td class="c">16</td>
+                <td class="c">$\eqsim$</td>
+                <td class="l">\eqsim</td>
+                <td class="c">64</td>
+                <td class="c">$\geqslant$</td>
+                <td class="l">\geqslant</td>
+            </tr>
+            <tr>
+                <td class="c">17</td>
+                <td class="c">$\cong$</td>
+                <td class="l">\cong</td>
+                <td class="c">65</td>
+                <td class="c">$\ngeqslant$</td>
+                <td class="l">\ngeqslant</td>
+            </tr>
+            <tr>
+                <td class="c">18</td>
+                <td class="c">$\ncong$</td>
+                <td class="l">\ncong</td>
+                <td class="c">66</td>
+                <td class="c">$\eqslantgtr$</td>
+                <td class="l">\eqslantgtr</td>
+            </tr>
+            <tr>
+                <td class="c">19</td>
+                <td class="c">$\approx$</td>
+                <td class="l">\approx</td>
+                <td class="c">67</td>
+                <td class="c">$\lesssim$</td>
+                <td class="l">\lesssim</td>
+            </tr>
+            <tr>
+                <td class="c">20</td>
+                <td class="c">$\thickapprox$</td>
+                <td class="l">\thickapprox</td>
+                <td class="c">68</td>
+                <td class="c">$\lnsim$</td>
+                <td class="l">\lnsim</td>
+            </tr>
+            <tr>
+                <td class="c">21</td>
+                <td class="c">$\approxeq$</td>
+                <td class="l">\approxeq</td>
+                <td class="c">69</td>
+                <td class="c">$\lessapprox$</td>
+                <td class="l">\lessapprox</td>
+            </tr>
+            <tr>
+                <td class="c">22</td>
+                <td class="c">$\asymp$</td>
+                <td class="l">\asymp</td>
+                <td class="c">70</td>
+                <td class="c">$\lnapprox$</td>
+                <td class="l">\lnapprox</td>
+            </tr>
+            <tr>
+                <td class="c">23</td>
+                <td class="c">$\propto$</td>
+                <td class="l">\propto</td>
+                <td class="c">71</td>
+                <td class="c">$\gtrsim$</td>
+                <td class="l">\gtrsim</td>
+            </tr>
+            <tr>
+                <td class="c">24</td>
+                <td class="c">$\varpropto$</td>
+                <td class="l">\varpropto</td>
+                <td class="c">72</td>
+                <td class="c">$\gnsim$</td>
+                <td class="l">\gnsim</td>
+            </tr>
+            <tr>
+                <td class="c">25</td>
+                <td class="c">$<$< /td>
+                <td class="l">&lt;</td>
+                <td class="c">73</td>
+                <td class="c">$\gtrapprox$</td>
+                <td class="l">\gtrapprox</td>
+            </tr>
+            <tr>
+                <td class="c">26</td>
+                <td class="c">$\nless$</td>
+                <td class="l">\nless</td>
+                <td class="c">74</td>
+                <td class="c">$\gnapprox$</td>
+                <td class="l">\gnapprox</td>
+            </tr>
+            <tr>
+                <td class="c">27</td>
+                <td class="c">$\ll$</td>
+                <td class="l">\ll</td>
+                <td class="c">75</td>
+                <td class="c">$\prec$</td>
+                <td class="l">\prec</td>
+            </tr>
+            <tr>
+                <td class="c">28</td>
+                <td class="c">$\not\ll$</td>
+                <td class="l">\not\ll</td>
+                <td class="c">76</td>
+                <td class="c">$\nprec$</td>
+                <td class="l">\nprec</td>
+            </tr>
+            <tr>
+                <td class="c">29</td>
+                <td class="c">$\lll$</td>
+                <td class="l">\lll</td>
+                <td class="c">77</td>
+                <td class="c">$\preceq$</td>
+                <td class="l">\preceq</td>
+            </tr>
+            <tr>
+                <td class="c">30</td>
+                <td class="c">$\not\lll$</td>
+                <td class="l">\not\lll</td>
+                <td class="c">78</td>
+                <td class="c">$\npreceq$</td>
+                <td class="l">\npreceq</td>
+            </tr>
+            <tr>
+                <td class="c">31</td>
+                <td class="c">$\lessdot$</td>
+                <td class="l">\lessdot</td>
+                <td class="c">79</td>
+                <td class="c">$\precneqq$</td>
+                <td class="l">\precneqq</td>
+            </tr>
+            <tr>
+                <td class="c">32</td>
+                <td class="c">$>$</td>
+                <td class="l">&gt;</td>
+                <td class="c">80</td>
+                <td class="c">$\succ$</td>
+                <td class="l">\succ</td>
+            </tr>
+            <tr>
+                <td class="c">33</td>
+                <td class="c">$\ngtr$</td>
+                <td class="l">\ngtr</td>
+                <td class="c">81</td>
+                <td class="c">$\nsucc$</td>
+                <td class="l">\nsucc</td>
+            </tr>
+            <tr>
+                <td class="c">34</td>
+                <td class="c">$\gg$</td>
+                <td class="l">\gg</td>
+                <td class="c">82</td>
+                <td class="c">$\succeq$</td>
+                <td class="l">\succeq</td>
+            </tr>
+            <tr>
+                <td class="c">35</td>
+                <td class="c">$\not\gg$</td>
+                <td class="l">\not\gg</td>
+                <td class="c">83</td>
+                <td class="c">$\nsucceq$</td>
+                <td class="l">\nsucceq</td>
+            </tr>
+            <tr>
+                <td class="c">36</td>
+                <td class="c">$\ggg$</td>
+                <td class="l">\ggg</td>
+                <td class="c">84</td>
+                <td class="c">$\succneqq$</td>
+                <td class="l">\succneqq</td>
+            </tr>
+            <tr>
+                <td class="c">37</td>
+                <td class="c">$\not\ggg$</td>
+                <td class="l">\not\ggg</td>
+                <td class="c">85</td>
+                <td class="c">$\preccurlyeq$</td>
+                <td class="l">\preccurlyeq</td>
+            </tr>
+            <tr>
+                <td class="c">38</td>
+                <td class="c">$\gtrdot$</td>
+                <td class="l">\gtrdot</td>
+                <td class="c">86</td>
+                <td class="c">$\curlyeqprec$</td>
+                <td class="l">\curlyeqprec</td>
+            </tr>
+            <tr>
+                <td class="c">39</td>
+                <td class="c">$\le$</td>
+                <td class="l">\le</td>
+                <td class="c">87</td>
+                <td class="c">$\succcurlyeq$</td>
+                <td class="l">\succcurlyeq</td>
+            </tr>
+            <tr>
+                <td class="c">40</td>
+                <td class="c">$\leq$</td>
+                <td class="l">\leq</td>
+                <td class="c">88</td>
+                <td class="c">$\curlyeqsucc$</td>
+                <td class="l">\curlyeqsucc</td>
+            </tr>
+            <tr>
+                <td class="c">41</td>
+                <td class="c">$\lneq$</td>
+                <td class="l">\lneq</td>
+                <td class="c">89</td>
+                <td class="c">$\precsim$</td>
+                <td class="l">\precsim</td>
+            </tr>
+            <tr>
+                <td class="c">42</td>
+                <td class="c">$\leqq$</td>
+                <td class="l">\leqq</td>
+                <td class="c">90</td>
+                <td class="c">$\precnsim$</td>
+                <td class="l">\precnsim</td>
+            </tr>
+            <tr>
+                <td class="c">43</td>
+                <td class="c">$\nleq$</td>
+                <td class="l">\nleq</td>
+                <td class="c">91</td>
+                <td class="c">$\precapprox$</td>
+                <td class="l">\precapprox</td>
+            </tr>
+            <tr>
+                <td class="c">44</td>
+                <td class="c">$\nleqq$</td>
+                <td class="l">\nleqq</td>
+                <td class="c">92</td>
+                <td class="c">$\precnapprox$</td>
+                <td class="l">\precnapprox</td>
+            </tr>
+            <tr>
+                <td class="c">45</td>
+                <td class="c">$\lneqq$</td>
+                <td class="l">\lneqq</td>
+                <td class="c">93</td>
+                <td class="c">$\succsim$</td>
+                <td class="l">\succsim</td>
+            </tr>
+            <tr>
+                <td class="c">46</td>
+                <td class="c">$\lvertneqq$</td>
+                <td class="l">\lvertneqq</td>
+                <td class="c">94</td>
+                <td class="c">$\succnsim$</td>
+                <td class="l">\succnsim</td>
+            </tr>
+            <tr>
+                <td class="c">47</td>
+                <td class="c">$\ge$</td>
+                <td class="l">\ge</td>
+                <td class="c">95</td>
+                <td class="c">$\succapprox$</td>
+                <td class="l">\succapprox</td>
+            </tr>
+            <tr>
+                <td class="c">48</td>
+                <td class="c">$\geq$</td>
+                <td class="l">\geq</td>
+                <td class="c">96</td>
+                <td class="c">$\succnapprox$</td>
+                <td class="l">\succnapprox</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<h5>2.1.5 几何符号 Geometric symbols</h5>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="c">序号</th>
+                <th class="c">图标</th>
+                <th class="l">LaTeX</th>
+                <th class="c">序号</th>
+                <th class="c">图标</th>
+                <th class="l">LaTeX</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="c">1</td>
+                <td class="c">$\parallel$</td>
+                <td class="l">\parallel</td>
+                <td class="c">14</td>
+                <td class="c">$\lozenge$</td>
+                <td class="l">\lozenge</td>
+            </tr>
+            <tr>
+                <td class="c">2</td>
+                <td class="c">$\nparallel$</td>
+                <td class="l">\nparallel</td>
+                <td class="c">15</td>
+                <td class="c">$\blacklozenge$</td>
+                <td class="l">\blacklozenge</td>
+            </tr>
+            <tr>
+                <td class="c">3</td>
+                <td class="c">$\shortparallel$</td>
+                <td class="l">\shortparallel</td>
+                <td class="c">16</td>
+                <td class="c">$\bigstar$</td>
+                <td class="l">\bigstar</td>
+            </tr>
+            <tr>
+                <td class="c">4</td>
+                <td class="c">$\nshortparallel$</td>
+                <td class="l">\nshortparallel</td>
+                <td class="c">17</td>
+                <td class="c">$\bigcirc$</td>
+                <td class="l">\bigcirc</td>
+            </tr>
+            <tr>
+                <td class="c">5</td>
+                <td class="c">$\perp$</td>
+                <td class="l">\perp</td>
+                <td class="c">18</td>
+                <td class="c">$\triangle$</td>
+                <td class="l">\triangle</td>
+            </tr>
+            <tr>
+                <td class="c">6</td>
+                <td class="c">$\angle$</td>
+                <td class="l">\angle</td>
+                <td class="c">19</td>
+                <td class="c">$\bigtriangleup$</td>
+                <td class="l">\bigtriangleup</td>
+            </tr>
+            <tr>
+                <td class="c">7</td>
+                <td class="c">$\sphericalangle$</td>
+                <td class="l">\sphericalangle</td>
+                <td class="c">20</td>
+                <td class="c">$\bigtriangledown$</td>
+                <td class="l">\bigtriangledown</td>
+            </tr>
+            <tr>
+                <td class="c">8</td>
+                <td class="c">$\measuredangle$</td>
+                <td class="l">\measuredangle</td>
+                <td class="c">21</td>
+                <td class="c">$\vartriangle$</td>
+                <td class="l">\vartriangle</td>
+            </tr>
+            <tr>
+                <td class="c">9</td>
+                <td class="c">$45^\circ$</td>
+                <td class="l">45^\circ</td>
+                <td class="c">22</td>
+                <td class="c">$\triangledown$</td>
+                <td class="l">\triangledown</td>
+            </tr>
+            <tr>
+                <td class="c">10</td>
+                <td class="c">$\Box$</td>
+                <td class="l">\Box</td>
+                <td class="c">23</td>
+                <td class="c">$\blacktriangle$</td>
+                <td class="l">\blacktriangle</td>
+            </tr>
+            <tr>
+                <td class="c">11</td>
+                <td class="c">$\blacksquare$</td>
+                <td class="l">\blacksquare</td>
+                <td class="c">24</td>
+                <td class="c">$\blacktriangledown$</td>
+                <td class="l">\blacktriangledown</td>
+            </tr>
+            <tr>
+                <td class="c">12</td>
+                <td class="c">$\diamond$</td>
+                <td class="l">\diamond</td>
+                <td class="c">25</td>
+                <td class="c">$\blacktriangleleft$</td>
+                <td class="l">\blacktriangleleft</td>
+            </tr>
+            <tr>
+                <td class="c">13</td>
+                <td class="c">$\Diamond$</td>
+                <td class="l">\Diamond \lozenge</td>
+                <td class="c">26</td>
+                <td class="c">$\blacktriangleright$</td>
+                <td class="l">\blacktriangleright</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<h5>2.1.6 逻辑符号 Logic symbols</h5>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="c">序号</th>
+                <th class="c">图标</th>
+                <th class="l">LaTeX</th>
+                <th class="c">序号</th>
+                <th class="c">图标</th>
+                <th class="l">LaTeX</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="c">1</td>
+                <td class="c">$\forall$</td>
+                <td class="l">\forall</td>
+                <td class="c">20</td>
+                <td class="c">$\neg$</td>
+                <td class="l">\neg</td>
+            </tr>
+            <tr>
+                <td class="c">2</td>
+                <td class="c">$\exists$</td>
+                <td class="l">\exists</td>
+                <td class="c">21</td>
+                <td class="c">$\not\operatorname{R}$</td>
+                <td class="l">\not\operatorname{R}</td>
+            </tr>
+            <tr>
+                <td class="c">3</td>
+                <td class="c">$\nexists$</td>
+                <td class="l">\nexists</td>
+                <td class="c">22</td>
+                <td class="c">$\bot$</td>
+                <td class="l">\bot</td>
+            </tr>
+            <tr>
+                <td class="c">4</td>
+                <td class="c">$\therefore$</td>
+                <td class="l">\therefore</td>
+                <td class="c">23</td>
+                <td class="c">$\top$</td>
+                <td class="l">\top</td>
+            </tr>
+            <tr>
+                <td class="c">5</td>
+                <td class="c">$\because$</td>
+                <td class="l">\because</td>
+                <td class="c">24</td>
+                <td class="c">$\vdash$</td>
+                <td class="l">\vdash</td>
+            </tr>
+            <tr>
+                <td class="c">6</td>
+                <td class="c">$\And$</td>
+                <td class="l">\And</td>
+                <td class="c">25</td>
+                <td class="c">$\dashv$</td>
+                <td class="l">\dashv</td>
+            </tr>
+            <tr>
+                <td class="c">7</td>
+                <td class="c">$\lor$</td>
+                <td class="l">\lor</td>
+                <td class="c">26</td>
+                <td class="c">$\vDash$</td>
+                <td class="l">\vDash</td>
+            </tr>
+            <tr>
+                <td class="c">8</td>
+                <td class="c">$\vee$</td>
+                <td class="l">\vee</td>
+                <td class="c">27</td>
+                <td class="c">$\Vdash$</td>
+                <td class="l">\Vdash</td>
+            </tr>
+            <tr>
+                <td class="c">9</td>
+                <td class="c">$\curlyvee$</td>
+                <td class="l">\curlyvee</td>
+                <td class="c">28</td>
+                <td class="c">$\models$</td>
+                <td class="l">\models</td>
+            </tr>
+            <tr>
+                <td class="c">10</td>
+                <td class="c">$\bigvee$</td>
+                <td class="l">\bigvee</td>
+                <td class="c">29</td>
+                <td class="c">$\Vvdash$</td>
+                <td class="l">\Vvdash</td>
+            </tr>
+            <tr>
+                <td class="c">11</td>
+                <td class="c">$\land$</td>
+                <td class="l">\land</td>
+                <td class="c">30</td>
+                <td class="c">$\nvdash$</td>
+                <td class="l">\nvdash</td>
+            </tr>
+            <tr>
+                <td class="c">12</td>
+                <td class="c">$\wedge$</td>
+                <td class="l">\wedge</td>
+                <td class="c">31</td>
+                <td class="c">$\nVdash$</td>
+                <td class="l">\nVdash</td>
+            </tr>
+            <tr>
+                <td class="c">13</td>
+                <td class="c">$\curlywedge$</td>
+                <td class="l">\curlywedge</td>
+                <td class="c">32</td>
+                <td class="c">$\nvDash$</td>
+                <td class="l">\nvDash</td>
+            </tr>
+            <tr>
+                <td class="c">14</td>
+                <td class="c">$\bigwedge$</td>
+                <td class="l">\bigwedge</td>
+                <td class="c">33</td>
+                <td class="c">$\nVDash$</td>
+                <td class="l">\nVDash</td>
+            </tr>
+            <tr>
+                <td class="c">15</td>
+                <td class="c">$\bar{q}$</td>
+                <td class="l">\bar{q}</td>
+                <td class="c">34</td>
+                <td class="c">$\ulcorner$</td>
+                <td class="l">\ulcorner</td>
+            </tr>
+            <tr>
+                <td class="c">16</td>
+                <td class="c">$\bar{abc}$</td>
+                <td class="l">\bar{abc}</td>
+                <td class="c">35</td>
+                <td class="c">$\urcorner$</td>
+                <td class="l">\urcorner</td>
+            </tr>
+            <tr>
+                <td class="c">17</td>
+                <td class="c">$\overline{q}$</td>
+                <td class="l">\overline{q}</td>
+                <td class="c">36</td>
+                <td class="c">$\llcorner$</td>
+                <td class="l">\llcorner</td>
+            </tr>
+            <tr>
+                <td class="c">18</td>
+                <td class="c">$\overline{abc}$</td>
+                <td class="l">\overline{abc}</td>
+                <td class="c">37</td>
+                <td class="c">$\lrcorner$</td>
+                <td class="l">\lrcorner</td>
+            </tr>
+            <tr>
+                <td class="c">19</td>
+                <td class="c">$\lnot$</td>
+                <td class="l">\lnot</td>
+                <td class="c">&nbsp;</td>
+                <td class="c">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<h5>2.1.7 集合 Sets</h5>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="c">序号</th>
+                <th class="c">图标</th>
+                <th class="l">LaTeX</th>
+                <th class="c">序号</th>
+                <th class="c">图标</th>
+                <th class="l">LaTeX</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="c">1</td>
+                <td class="c">$\{\}$</td>
+                <td class="l">{}</td>
+                <td class="c">23</td>
+                <td class="c">$\sqsubset$</td>
+                <td class="l">\sqsubset</td>
+            </tr>
+            <tr>
+                <td class="c">2</td>
+                <td class="c">$\emptyset$</td>
+                <td class="l">\emptyset</td>
+                <td class="c">24</td>
+                <td class="c">$\supset$</td>
+                <td class="l">\supset</td>
+            </tr>
+            <tr>
+                <td class="c">3</td>
+                <td class="c">$\varnothing$</td>
+                <td class="l">\varnothing</td>
+                <td class="c">25</td>
+                <td class="c">$\Supset$</td>
+                <td class="l">\Supset</td>
+            </tr>
+            <tr>
+                <td class="c">4</td>
+                <td class="c">$\in$</td>
+                <td class="l">\in</td>
+                <td class="c">26</td>
+                <td class="c">$\sqsupset$</td>
+                <td class="l">\sqsupset</td>
+            </tr>
+            <tr>
+                <td class="c">5</td>
+                <td class="c">$\notin$</td>
+                <td class="l">\notin</td>
+                <td class="c">27</td>
+                <td class="c">$\subseteq$</td>
+                <td class="l">\subseteq</td>
+            </tr>
+            <tr>
+                <td class="c">6</td>
+                <td class="c">$\ni$</td>
+                <td class="l">\ni</td>
+                <td class="c">28</td>
+                <td class="c">$\nsubseteq$</td>
+                <td class="l">\nsubseteq</td>
+            </tr>
+            <tr>
+                <td class="c">7</td>
+                <td class="c">$\cap$</td>
+                <td class="l">\cap</td>
+                <td class="c">29</td>
+                <td class="c">$\subsetneq$</td>
+                <td class="l">\subsetneq</td>
+            </tr>
+            <tr>
+                <td class="c">8</td>
+                <td class="c">$\Cap$</td>
+                <td class="l">\Cap</td>
+                <td class="c">30</td>
+                <td class="c">$\varsubsetneq$</td>
+                <td class="l">\varsubsetneq</td>
+            </tr>
+            <tr>
+                <td class="c">9</td>
+                <td class="c">$\sqcap$</td>
+                <td class="l">\sqcap</td>
+                <td class="c">31</td>
+                <td class="c">$\sqsubseteq$</td>
+                <td class="l">\sqsubseteq</td>
+            </tr>
+            <tr>
+                <td class="c">10</td>
+                <td class="c">$\bigcap$</td>
+                <td class="l">\bigcap</td>
+                <td class="c">32</td>
+                <td class="c">$\supseteq$</td>
+                <td class="l">\supseteq</td>
+            </tr>
+            <tr>
+                <td class="c">11</td>
+                <td class="c">$\cup$</td>
+                <td class="l">\cup</td>
+                <td class="c">33</td>
+                <td class="c">$\nsupseteq$</td>
+                <td class="l">\nsupseteq</td>
+            </tr>
+            <tr>
+                <td class="c">12</td>
+                <td class="c">$\Cup$</td>
+                <td class="l">\Cup</td>
+                <td class="c">34</td>
+                <td class="c">$\supsetneq$</td>
+                <td class="l">\supsetneq</td>
+            </tr>
+            <tr>
+                <td class="c">13</td>
+                <td class="c">$\sqcup$</td>
+                <td class="l">\sqcup</td>
+                <td class="c">35</td>
+                <td class="c">$\varsupsetneq$</td>
+                <td class="l">\varsupsetneq</td>
+            </tr>
+            <tr>
+                <td class="c">14</td>
+                <td class="c">$\bigcup$</td>
+                <td class="l">\bigcup</td>
+                <td class="c">36</td>
+                <td class="c">$\sqsupseteq$</td>
+                <td class="l">\sqsupseteq</td>
+            </tr>
+            <tr>
+                <td class="c">15</td>
+                <td class="c">$\bigsqcup$</td>
+                <td class="l">\bigsqcup</td>
+                <td class="c">37</td>
+                <td class="c">$\subseteqq$</td>
+                <td class="l">\subseteqq</td>
+            </tr>
+            <tr>
+                <td class="c">16</td>
+                <td class="c">$\uplus$</td>
+                <td class="l">\uplus</td>
+                <td class="c">38</td>
+                <td class="c">$\nsubseteqq$</td>
+                <td class="l">\nsubseteqq</td>
+            </tr>
+            <tr>
+                <td class="c">17</td>
+                <td class="c">$\biguplus$</td>
+                <td class="l">\biguplus</td>
+                <td class="c">39</td>
+                <td class="c">$\subsetneqq$</td>
+                <td class="l">\subsetneqq</td>
+            </tr>
+            <tr>
+                <td class="c">18</td>
+                <td class="c">$\setminus$</td>
+                <td class="l">\setminus</td>
+                <td class="c">40</td>
+                <td class="c">$\varsubsetneqq$</td>
+                <td class="l">\varsubsetneqq</td>
+            </tr>
+            <tr>
+                <td class="c">19</td>
+                <td class="c">$\smallsetminus$</td>
+                <td class="l">\smallsetminus</td>
+                <td class="c">41</td>
+                <td class="c">$\supseteqq$</td>
+                <td class="l">\supseteqq</td>
+            </tr>
+            <tr>
+                <td class="c">20</td>
+                <td class="c">$\times$</td>
+                <td class="l">\times</td>
+                <td class="c">42</td>
+                <td class="c">$\nsupseteqq$</td>
+                <td class="l">\nsupseteqq</td>
+            </tr>
+            <tr>
+                <td class="c">21</td>
+                <td class="c">$\subset$</td>
+                <td class="l">\subset</td>
+                <td class="c">43</td>
+                <td class="c">$\supsetneqq$</td>
+                <td class="l">\supsetneqq</td>
+            </tr>
+            <tr>
+                <td class="c">22</td>
+                <td class="c">$\Subset$</td>
+                <td class="l">\Subset</td>
+                <td class="c">44</td>
+                <td class="c">$\varsupsetneqq$</td>
+                <td class="l">\varsupsetneqq</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<h5>2.1.8 箭头 Arrows</h5>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="c">序号</th>
+                <th class="c">图标</th>
+                <th class="l">LaTeX</th>
+                <th class="c">序号</th>
+                <th class="c">图标</th>
+                <th class="l">LaTeX</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="c">1</td>
+                <td class="c">$\Rrightarrow$</td>
+                <td class="l">\Rrightarrow</td>
+                <td class="c">36</td>
+                <td class="c">$\longmapsto$</td>
+                <td class="l">\longmapsto</td>
+            </tr>
+            <tr>
+                <td class="c">2</td>
+                <td class="c">$\Lleftarrow$</td>
+                <td class="l">\Lleftarrow</td>
+                <td class="c">37</td>
+                <td class="c">$\rightharpoonup$</td>
+                <td class="l">\rightharpoonup</td>
+            </tr>
+            <tr>
+                <td class="c">3</td>
+                <td class="c">$\Rightarrow$</td>
+                <td class="l">\Rightarrow</td>
+                <td class="c">38</td>
+                <td class="c">$\rightharpoondown$</td>
+                <td class="l">\rightharpoondown</td>
+            </tr>
+            <tr>
+                <td class="c">4</td>
+                <td class="c">$\nRightarrow$</td>
+                <td class="l">\nRightarrow</td>
+                <td class="c">39</td>
+                <td class="c">$\leftharpoonup$</td>
+                <td class="l">\leftharpoonup</td>
+            </tr>
+            <tr>
+                <td class="c">5</td>
+                <td class="c">$\Longrightarrow$</td>
+                <td class="l">\Longrightarrow</td>
+                <td class="c">40</td>
+                <td class="c">$\leftharpoondown$</td>
+                <td class="l">\leftharpoondown</td>
+            </tr>
+            <tr>
+                <td class="c">6</td>
+                <td class="c">$\implies$</td>
+                <td class="l">\implies</td>
+                <td class="c">41</td>
+                <td class="c">$\upharpoonleft$</td>
+                <td class="l">\upharpoonleft</td>
+            </tr>
+            <tr>
+                <td class="c">7</td>
+                <td class="c">$\Leftarrow$</td>
+                <td class="l">\Leftarrow</td>
+                <td class="c">42</td>
+                <td class="c">$\upharpoonright$</td>
+                <td class="l">\upharpoonright</td>
+            </tr>
+            <tr>
+                <td class="c">8</td>
+                <td class="c">$\nLeftarrow$</td>
+                <td class="l">\nLeftarrow</td>
+                <td class="c">43</td>
+                <td class="c">$\downharpoonleft$</td>
+                <td class="l">\downharpoonleft</td>
+            </tr>
+            <tr>
+                <td class="c">9</td>
+                <td class="c">$\Longleftarrow$</td>
+                <td class="l">\Longleftarrow</td>
+                <td class="c">44</td>
+                <td class="c">$\downharpoonright$</td>
+                <td class="l">\downharpoonright</td>
+            </tr>
+            <tr>
+                <td class="c">10</td>
+                <td class="c">$\Leftrightarrow$</td>
+                <td class="l">\Leftrightarrow</td>
+                <td class="c">45</td>
+                <td class="c">$\rightleftharpoons$</td>
+                <td class="l">\rightleftharpoons</td>
+            </tr>
+            <tr>
+                <td class="c">11</td>
+                <td class="c">$\nLeftrightarrow$</td>
+                <td class="l">\nLeftrightarrow</td>
+                <td class="c">46</td>
+                <td class="c">$\leftrightharpoons$</td>
+                <td class="l">\leftrightharpoons</td>
+            </tr>
+            <tr>
+                <td class="c">12</td>
+                <td class="c">$\Longleftrightarrow$</td>
+                <td class="l">\Longleftrightarrow</td>
+                <td class="c">47</td>
+                <td class="c">$\curvearrowleft$</td>
+                <td class="l">\curvearrowleft</td>
+            </tr>
+            <tr>
+                <td class="c">13</td>
+                <td class="c">$\iff$</td>
+                <td class="l">\iff</td>
+                <td class="c">48</td>
+                <td class="c">$\circlearrowleft$</td>
+                <td class="l">\circlearrowleft</td>
+            </tr>
+            <tr>
+                <td class="c">14</td>
+                <td class="c">$\Uparrow$</td>
+                <td class="l">\Uparrow</td>
+                <td class="c">49</td>
+                <td class="c">$\Lsh$</td>
+                <td class="l">\Lsh</td>
+            </tr>
+            <tr>
+                <td class="c">15</td>
+                <td class="c">$\Downarrow$</td>
+                <td class="l">\Downarrow</td>
+                <td class="c">50</td>
+                <td class="c">$\upuparrows$</td>
+                <td class="l">\upuparrows</td>
+            </tr>
+            <tr>
+                <td class="c">16</td>
+                <td class="c">$\Updownarrow$</td>
+                <td class="l">\Updownarrow</td>
+                <td class="c">51</td>
+                <td class="c">$\rightrightarrows$</td>
+                <td class="l">\rightrightarrows</td>
+            </tr>
+            <tr>
+                <td class="c">17</td>
+                <td class="c">$\rightarrow$</td>
+                <td class="l">\rightarrow</td>
+                <td class="c">52</td>
+                <td class="c">$\rightleftarrows$</td>
+                <td class="l">\rightleftarrows</td>
+            </tr>
+            <tr>
+                <td class="c">18</td>
+                <td class="c">$\to$</td>
+                <td class="l">\to</td>
+                <td class="c">53</td>
+                <td class="c">$\rightarrowtail$</td>
+                <td class="l">\rightarrowtail</td>
+            </tr>
+            <tr>
+                <td class="c">19</td>
+                <td class="c">$\nrightarrow$</td>
+                <td class="l">\nrightarrow</td>
+                <td class="c">54</td>
+                <td class="c">$\looparrowright$</td>
+                <td class="l">\looparrowright</td>
+            </tr>
+            <tr>
+                <td class="c">20</td>
+                <td class="c">$\longrightarrow$</td>
+                <td class="l">\longrightarrow</td>
+                <td class="c">55</td>
+                <td class="c">$\curvearrowright$</td>
+                <td class="l">\curvearrowright</td>
+            </tr>
+            <tr>
+                <td class="c">21</td>
+                <td class="c">$\leftarrow$</td>
+                <td class="l">\leftarrow</td>
+                <td class="c">56</td>
+                <td class="c">$\circlearrowright$</td>
+                <td class="l">\circlearrowright</td>
+            </tr>
+            <tr>
+                <td class="c">22</td>
+                <td class="c">$\gets$</td>
+                <td class="l">\gets</td>
+                <td class="c">57</td>
+                <td class="c">$\Rsh$</td>
+                <td class="l">\Rsh</td>
+            </tr>
+            <tr>
+                <td class="c">23</td>
+                <td class="c">$\nleftarrow$</td>
+                <td class="l">\nleftarrow</td>
+                <td class="c">58</td>
+                <td class="c">$\downdownarrows$</td>
+                <td class="l">\downdownarrows</td>
+            </tr>
+            <tr>
+                <td class="c">24</td>
+                <td class="c">$\longleftarrow$</td>
+                <td class="l">\longleftarrow</td>
+                <td class="c">59</td>
+                <td class="c">$\leftleftarrows$</td>
+                <td class="l">\leftleftarrows</td>
+            </tr>
+            <tr>
+                <td class="c">25</td>
+                <td class="c">$\leftrightarrow$</td>
+                <td class="l">\leftrightarrow</td>
+                <td class="c">60</td>
+                <td class="c">$\leftrightarrows$</td>
+                <td class="l">\leftrightarrows</td>
+            </tr>
+            <tr>
+                <td class="c">26</td>
+                <td class="c">$\nleftrightarrow$</td>
+                <td class="l">\nleftrightarrow</td>
+                <td class="c">61</td>
+                <td class="c">$\leftarrowtail$</td>
+                <td class="l">\leftarrowtail</td>
+            </tr>
+            <tr>
+                <td class="c">27</td>
+                <td class="c">$\longleftrightarrow$</td>
+                <td class="l">\longleftrightarrow</td>
+                <td class="c">62</td>
+                <td class="c">$\looparrowleft$</td>
+                <td class="l">\looparrowleft</td>
+            </tr>
+            <tr>
+                <td class="c">28</td>
+                <td class="c">$\uparrow$</td>
+                <td class="l">\uparrow</td>
+                <td class="c">63</td>
+                <td class="c">$\hookrightarrow$</td>
+                <td class="l">\hookrightarrow</td>
+            </tr>
+            <tr>
+                <td class="c">29</td>
+                <td class="c">$\downarrow$</td>
+                <td class="l">\downarrow</td>
+                <td class="c">64</td>
+                <td class="c">$\hookleftarrow$</td>
+                <td class="l">\hookleftarrow</td>
+            </tr>
+            <tr>
+                <td class="c">30</td>
+                <td class="c">$\updownarrow$</td>
+                <td class="l">\updownarrow</td>
+                <td class="c">65</td>
+                <td class="c">$\multimap$</td>
+                <td class="l">\multimap</td>
+            </tr>
+            <tr>
+                <td class="c">31</td>
+                <td class="c">$\nearrow$</td>
+                <td class="l">\nearrow</td>
+                <td class="c">66</td>
+                <td class="c">$\leftrightsquigarrow$</td>
+                <td class="l">\leftrightsquigarrow</td>
+            </tr>
+            <tr>
+                <td class="c">32</td>
+                <td class="c">$\swarrow$</td>
+                <td class="l">\swarrow</td>
+                <td class="c">67</td>
+                <td class="c">$\rightsquigarrow$</td>
+                <td class="l">\rightsquigarrow</td>
+            </tr>
+            <tr>
+                <td class="c">33</td>
+                <td class="c">$\nwarrow$</td>
+                <td class="l">\nwarrow</td>
+                <td class="c">68</td>
+                <td class="c">$\twoheadrightarrow$</td>
+                <td class="l">\twoheadrightarrow</td>
+            </tr>
+            <tr>
+                <td class="c">34</td>
+                <td class="c">$\searrow$</td>
+                <td class="l">\searrow</td>
+                <td class="c">69</td>
+                <td class="c">$\twoheadleftarrow$</td>
+                <td class="l">\twoheadleftarrow</td>
+            </tr>
+            <tr>
+                <td class="c">35</td>
+                <td class="c">$\mapsto$</td>
+                <td class="l">\mapsto</td>
+                <td class="c">&nbsp;</td>
+                <td class="c">&nbsp;</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<h5>2.1.9 特殊 Special</h5>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="c">序号</th>
+                <th class="c">图标</th>
+                <th class="l">LaTeX</th>
+                <th class="c">序号</th>
+                <th class="c">图标</th>
+                <th class="l">LaTeX</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="c">1</td>
+                <td class="c">$\infty$</td>
+                <td class="l">\infty</td>
+                <td class="c">33</td>
+                <td class="c">$\flat$</td>
+                <td class="l">\flat</td>
+            </tr>
+            <tr>
+                <td class="c">2</td>
+                <td class="c">$\aleph$</td>
+                <td class="l">\aleph</td>
+                <td class="c">34</td>
+                <td class="c">$\natural$</td>
+                <td class="l">\natural</td>
+            </tr>
+            <tr>
+                <td class="c">3</td>
+                <td class="c">$\complement$</td>
+                <td class="l">\complement</td>
+                <td class="c">35</td>
+                <td class="c">$\sharp$</td>
+                <td class="l">\sharp</td>
+            </tr>
+            <tr>
+                <td class="c">4</td>
+                <td class="c">$\backepsilon$</td>
+                <td class="l">\backepsilon</td>
+                <td class="c">36</td>
+                <td class="c">$\diagup$</td>
+                <td class="l">\diagup</td>
+            </tr>
+            <tr>
+                <td class="c">5</td>
+                <td class="c">$\eth$</td>
+                <td class="l">\eth</td>
+                <td class="c">37</td>
+                <td class="c">$\diagdown$</td>
+                <td class="l">\diagdown</td>
+            </tr>
+            <tr>
+                <td class="c">6</td>
+                <td class="c">$\Finv$</td>
+                <td class="l">\Finv</td>
+                <td class="c">38</td>
+                <td class="c">$\centerdot$</td>
+                <td class="l">\centerdot</td>
+            </tr>
+            <tr>
+                <td class="c">7</td>
+                <td class="c">$\hbar$</td>
+                <td class="l">\hbar</td>
+                <td class="c">39</td>
+                <td class="c">$\ltimes$</td>
+                <td class="l">\ltimes</td>
+            </tr>
+            <tr>
+                <td class="c">8</td>
+                <td class="c">$\Im$</td>
+                <td class="l">\Im</td>
+                <td class="c">40</td>
+                <td class="c">$\rtimes$</td>
+                <td class="l">\rtimes</td>
+            </tr>
+            <tr>
+                <td class="c">9</td>
+                <td class="c">$\imath$</td>
+                <td class="l">\imath</td>
+                <td class="c">41</td>
+                <td class="c">$\leftthreetimes$</td>
+                <td class="l">\leftthreetimes</td>
+            </tr>
+            <tr>
+                <td class="c">10</td>
+                <td class="c">$\jmath$</td>
+                <td class="l">\jmath</td>
+                <td class="c">42</td>
+                <td class="c">$\rightthreetimes$</td>
+                <td class="l">\rightthreetimes</td>
+            </tr>
+            <tr>
+                <td class="c">11</td>
+                <td class="c">$\Bbbk$</td>
+                <td class="l">\Bbbk</td>
+                <td class="c">43</td>
+                <td class="c">$\eqcirc$</td>
+                <td class="l">\eqcirc</td>
+            </tr>
+            <tr>
+                <td class="c">12</td>
+                <td class="c">$\ell$</td>
+                <td class="l">\ell</td>
+                <td class="c">44</td>
+                <td class="c">$\circeq$</td>
+                <td class="l">\circeq</td>
+            </tr>
+            <tr>
+                <td class="c">13</td>
+                <td class="c">$\mho$</td>
+                <td class="l">\mho</td>
+                <td class="c">45</td>
+                <td class="c">$\triangleq$</td>
+                <td class="l">\triangleq</td>
+            </tr>
+            <tr>
+                <td class="c">14</td>
+                <td class="c">$\wp$</td>
+                <td class="l">\wp</td>
+                <td class="c">46</td>
+                <td class="c">$\bumpeq$</td>
+                <td class="l">\bumpeq</td>
+            </tr>
+            <tr>
+                <td class="c">15</td>
+                <td class="c">$\Re$</td>
+                <td class="l">\Re</td>
+                <td class="c">47</td>
+                <td class="c">$\Bumpeq$</td>
+                <td class="l">\Bumpeq</td>
+            </tr>
+            <tr>
+                <td class="c">16</td>
+                <td class="c">$\circledS$</td>
+                <td class="l">\circledS</td>
+                <td class="c">48</td>
+                <td class="c">$\doteqdot$</td>
+                <td class="l">\doteqdot</td>
+            </tr>
+            <tr>
+                <td class="c">17</td>
+                <td class="c">$\amalg$</td>
+                <td class="l">\amalg</td>
+                <td class="c">49</td>
+                <td class="c">$\risingdotseq$</td>
+                <td class="l">\risingdotseq</td>
+            </tr>
+            <tr>
+                <td class="c">18</td>
+                <td class="c">$\%$</td>
+                <td class="l">\%</td>
+                <td class="c">50</td>
+                <td class="c">$\fallingdotseq$</td>
+                <td class="l">\fallingdotseq</td>
+            </tr>
+            <tr>
+                <td class="c">19</td>
+                <td class="c">$\dagger$</td>
+                <td class="l">\dagger</td>
+                <td class="c">51</td>
+                <td class="c">$\intercal$</td>
+                <td class="l">\intercal</td>
+            </tr>
+            <tr>
+                <td class="c">20</td>
+                <td class="c">$\ddagger$</td>
+                <td class="l">\ddagger</td>
+                <td class="c">52</td>
+                <td class="c">$\barwedge$</td>
+                <td class="l">\barwedge</td>
+            </tr>
+            <tr>
+                <td class="c">21</td>
+                <td class="c">$\ldots$</td>
+                <td class="l">\ldots</td>
+                <td class="c">53</td>
+                <td class="c">$\veebar$</td>
+                <td class="l">\veebar</td>
+            </tr>
+            <tr>
+                <td class="c">22</td>
+                <td class="c">$\cdots$</td>
+                <td class="l">\cdots</td>
+                <td class="c">54</td>
+                <td class="c">$\doublebarwedge$</td>
+                <td class="l">\doublebarwedge</td>
+            </tr>
+            <tr>
+                <td class="c">23</td>
+                <td class="c">$\smile$</td>
+                <td class="l">\smile</td>
+                <td class="c">55</td>
+                <td class="c">$\between$</td>
+                <td class="l">\between</td>
+            </tr>
+            <tr>
+                <td class="c">24</td>
+                <td class="c">$\frown$</td>
+                <td class="l">\frown</td>
+                <td class="c">56</td>
+                <td class="c">$\pitchfork$</td>
+                <td class="l">\pitchfork</td>
+            </tr>
+            <tr>
+                <td class="c">25</td>
+                <td class="c">$\wr$</td>
+                <td class="l">\wr</td>
+                <td class="c">57</td>
+                <td class="c">$\vartriangleleft$</td>
+                <td class="l">\vartriangleleft</td>
+            </tr>
+            <tr>
+                <td class="c">26</td>
+                <td class="c">$\triangleleft$</td>
+                <td class="l">\triangleleft</td>
+                <td class="c">58</td>
+                <td class="c">$\ntriangleleft$</td>
+                <td class="l">\ntriangleleft</td>
+            </tr>
+            <tr>
+                <td class="c">27</td>
+                <td class="c">$\triangleright$</td>
+                <td class="l">\triangleright</td>
+                <td class="c">59</td>
+                <td class="c">$\vartriangleright$</td>
+                <td class="l">\vartriangleright</td>
+            </tr>
+            <tr>
+                <td class="c">28</td>
+                <td class="c">$\diamondsuit$</td>
+                <td class="l">\diamondsuit</td>
+                <td class="c">60</td>
+                <td class="c">$\ntriangleright$</td>
+                <td class="l">\ntriangleright</td>
+            </tr>
+            <tr>
+                <td class="c">29</td>
+                <td class="c">$\heartsuit$</td>
+                <td class="l">\heartsuit</td>
+                <td class="c">61</td>
+                <td class="c">$\trianglelefteq$</td>
+                <td class="l">\trianglelefteq</td>
+            </tr>
+            <tr>
+                <td class="c">30</td>
+                <td class="c">$\clubsuit$</td>
+                <td class="l">\clubsuit</td>
+                <td class="c">62</td>
+                <td class="c">$\ntrianglelefteq$</td>
+                <td class="l">\ntrianglelefteq</td>
+            </tr>
+            <tr>
+                <td class="c">31</td>
+                <td class="c">$\spadesuit$</td>
+                <td class="l">\spadesuit</td>
+                <td class="c">63</td>
+                <td class="c">$\trianglerighteq$</td>
+                <td class="l">\trianglerighteq</td>
+            </tr>
+            <tr>
+                <td class="c">32</td>
+                <td class="c">$\Game$</td>
+                <td class="l">\Game</td>
+                <td class="c">64</td>
+                <td class="c">$\ntrianglerighteq$</td>
+                <td class="l">\ntrianglerighteq</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<h4>2.2 运算与函数 Operations &amp; Functions</h4>
+<h5>2.2.1 分数 Fractions</h5>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="l">类型</th>
+                <th class="l">样式</th>
+                <th class="l">LaTeX</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="l">分数<br />Fractions</td>
+                <td class="l">$\frac{2}{4}x=0.5x$</td>
+                <td class="l">\frac{2}{4}x=0.5x or {2 \over 4}x=0.5x</td>
+            </tr>
+            <tr>
+                <td class="l">小型分数<br />Small fractions (force \textstyle)</td>
+                <td class="l">$\tfrac{2}{4}x = 0.5x$</td>
+                <td class="l">\tfrac{2}{4}x = 0.5x</td>
+            </tr>
+            <tr>
+                <td class="l">大型分数（不嵌套）<br />Large (normal) fractions (force \displaystyle)</td>
+                <td class="l">$\dfrac{2}{4} = 0.5 \qquad \dfrac{2}{c + \dfrac{2}{d + \dfrac{2}{4}}} = a$</td>
+                <td class="l">\dfrac{2}{4} = 0.5 \qquad \dfrac{2}{c + \dfrac{2}{d + \dfrac{2}{4}}} = a</td>
+            </tr>
+            <tr>
+                <td class="l">大型分数（嵌套）<br />Large (nested) fractions</td>
+                <td class="l">$\cfrac{2}{c + \cfrac{2}{d + \cfrac{2}{4}}} = a$</td>
+                <td class="l">\cfrac{2}{c + \cfrac{2}{d + \cfrac{2}{4}}} = a</td>
+            </tr>
+            <tr>
+                <td class="l">约分线的使用<br />Cancellations in fractions</td>
+                <td class="l">
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="13.366ex" height="10.66ex"
+                        viewBox="0 -1632.5 5755 4589.8" role="img" focusable="false" style="vertical-align: -6.869ex;">
+                        <defs>
+                            <path stroke-width="0" id="E449-MJMATHI-78"
+                                d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z">
+                            </path>
+                            <path stroke-width="0" id="E449-MJMAIN-31"
+                                d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z">
+                            </path>
+                            <path stroke-width="0" id="E449-MJMAIN-2B"
+                                d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z">
+                            </path>
+                            <path stroke-width="0" id="E449-MJMATHI-79"
+                                d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z">
+                            </path>
+                            <path stroke-width="0" id="E449-MJMAIN-3D"
+                                d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z">
+                            </path>
+                            <path stroke-width="0" id="E449-MJMAIN-32"
+                                d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z">
+                            </path>
+                        </defs>
+                        <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)">
+                            <g transform="translate(120,0)">
+                                <rect stroke="none" width="3249" height="60" x="0" y="220"></rect>
+                                <g transform="translate(1338,705)">
+                                    <g></g>
+                                    <use xlink:href="#E449-MJMATHI-78" x="0" y="0"></use>
+                                </g>
+                                <g transform="translate(60,-1652)">
+                                    <g></g>
+                                    <use xlink:href="#E449-MJMAIN-31" x="0" y="0"></use>
+                                    <use xlink:href="#E449-MJMAIN-2B" x="722" y="0"></use>
+                                    <g transform="translate(1500,0)">
+                                        <g transform="translate(342,0)">
+                                            <rect stroke="none" width="1167" height="60" x="0" y="220"></rect>
+                                            <g transform="translate(60,885)">
+                                                <g></g>
+                                                <use xlink:href="#E449-MJMATHI-79" x="275" y="0"></use>
+                                                <line fill="none" stroke-width="75" x1="37" y1="-443" x2="1009"
+                                                    y2="680"></line>
+                                            </g>
+                                            <g transform="translate(60,-766)">
+                                                <g></g>
+                                                <use xlink:href="#E449-MJMATHI-79" x="275" y="0"></use>
+                                                <line fill="none" stroke-width="75" x1="37" y1="-443" x2="1009"
+                                                    y2="680"></line>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                            <use xlink:href="#E449-MJMAIN-3D" x="3767" y="0"></use>
+                            <g transform="translate(4545,0)">
+                                <g transform="translate(397,0)">
+                                    <rect stroke="none" width="692" height="60" x="0" y="220"></rect>
+                                    <g transform="translate(60,705)">
+                                        <g></g>
+                                        <use xlink:href="#E449-MJMATHI-78" x="0" y="0"></use>
+                                    </g>
+                                    <g transform="translate(96,-766)">
+                                        <g></g>
+                                        <use xlink:href="#E449-MJMAIN-32" x="0" y="0"></use>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </td>
+                <td class="l">\cfrac{x}{1 + \cfrac{\cancel{y}}{\cancel{y}}} = \cfrac{x}{2}</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<p><strong>注意：</strong>
+    其中<code>\cancel</code>命令需要<strong>cancel扩展包</strong>支持，<strong>cancel扩展包</strong>是一款自定义宏包，如需使用请在公式页面右上角【设置】处勾选后使用。
+</p>
+<h5>2.2.2 标准数值函数 Standard numerical functions</h5>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="l">样式</th>
+                <th class="l">LaTeX</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="l">$\exp_a b = a^b, \exp b = e^b, 10^m$</td>
+                <td class="l">\exp_a b = a^b, \exp b = e^b, 10^m</td>
+            </tr>
+            <tr>
+                <td class="l">$\ln c, \lg d = \log e, \log_{10} f$</td>
+                <td class="l">\ln c, \lg d = \log e, \log_{10} f</td>
+            </tr>
+            <tr>
+                <td class="l">$\sin a, \cos b, \tan c, \cot d, \sec e, \csc f$</td>
+                <td class="l">\sin a, \cos b, \tan c, \cot d, \sec e, \csc f</td>
+            </tr>
+            <tr>
+                <td class="l">$\arcsin a, \arccos b, \arctan c$</td>
+                <td class="l">\arcsin a, \arccos b, \arctan c</td>
+            </tr>
+            <tr>
+                <td class="l">$\operatorname{arccot} d, \operatorname{arcsec} e, \operatorname{arccsc} f$</td>
+                <td class="l">\operatorname{arccot} d, \operatorname{arcsec} e, \operatorname{arccsc} f</td>
+            </tr>
+            <tr>
+                <td class="l">$\sinh a, \cosh b, \tanh c, \coth d$</td>
+                <td class="l">\sinh a, \cosh b, \tanh c, \coth d</td>
+            </tr>
+            <tr>
+                <td class="l">$\operatorname{sh}k, \operatorname{ch}l, \operatorname{th}m, \operatorname{coth}n$</td>
+                <td class="l">\operatorname{sh}k, \operatorname{ch}l, \operatorname{th}m, \operatorname{coth}n</td>
+            </tr>
+            <tr>
+                <td class="l">$\operatorname{argsh}o, \operatorname{argch}p, \operatorname{argth}q$</td>
+                <td class="l">\operatorname{argsh}o, \operatorname{argch}p, \operatorname{argth}q</td>
+            </tr>
+            <tr>
+                <td class="l">$\operatorname{sgn}r, \left\vert s \right\vert$</td>
+                <td class="l">\operatorname{sgn}r, \left\vert s \right\vert</td>
+            </tr>
+            <tr>
+                <td class="l">$\min(x,y), \max(x,y)$</td>
+                <td class="l">\min(x,y), \max(x,y)</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<p><strong>注意：</strong>LaTeX和MathJax支持的操作符有限，如有特殊操作符，可以使用<code>\operatorname{}</code> 命令自定义，例如</p>
+<pre><code>\operatorname{mydefine}x
+  </code></pre>
+<div>$$ \operatorname{mydefine}x $$</div>
+<h5>2.2.3 根式 Radicals</h5>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="l">样式</th>
+                <th class="l">LaTeX</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="l">$\surd$</td>
+                <td class="l">\surd</td>
+            </tr>
+            <tr>
+                <td class="l">$\sqrt{\pi}$</td>
+                <td class="l">\sqrt{\pi}</td>
+            </tr>
+            <tr>
+                <td class="l">$\sqrt[n]{\pi}$</td>
+                <td class="l">\sqrt[n]{\pi}</td>
+            </tr>
+            <tr>
+                <td class="l">$\sqrt[3]{\frac{x^3+y^3}{2}}$</td>
+                <td class="l">\sqrt[3]{\frac{x^3+y^3}{2}}</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<h5>2.2.4 微分与导数 Differentials and derivatives</h5>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="l">样式</th>
+                <th class="l">LaTeX</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="l">$dt, \mathrm{d}t, \partial t, \nabla\psi$</td>
+                <td class="l">dt, \mathrm{d}t, \partial t, \nabla\psi</td>
+            </tr>
+            <tr>
+                <td class="l">$dy/dx, \mathrm{d}y/\mathrm{d}x, \frac{dy}{dx}, \frac{\mathrm{d}y}{\mathrm{d}x},
+                    \frac{\partial^2}{\partial x_1\partial x_2}y$</td>
+                <td class="l">dy/dx, \mathrm{d}y/\mathrm{d}x, \frac{dy}{dx}, \frac{\mathrm{d}y}{\mathrm{d}x},
+                    \frac{\partial^2}{\partial x_1\partial x_2}y</td>
+            </tr>
+            <tr>
+                <td class="l">$\prime, \backprime, f^\prime, f', f'', f^{(3)}, \dot y, \ddot y$</td>
+                <td class="l">\prime, \backprime, f^\prime, f&#39;, f&#39;&#39;, f^{(3)}, \dot y, \ddot y</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<h5>2.2.5 同余与模算术 Modular arithmetic</h5>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="l">样式</th>
+                <th class="l">LaTeX</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="l">$s_k \equiv 0 \pmod{m}$</td>
+                <td class="l">s_k \equiv 0 \pmod{m}</td>
+            </tr>
+            <tr>
+                <td class="l">$a \bmod b$</td>
+                <td class="l">a \bmod b</td>
+            </tr>
+            <tr>
+                <td class="l">$\gcd(m, n), \operatorname{lcm}(m, n)$</td>
+                <td class="l">\gcd(m, n), \operatorname{lcm}(m, n)</td>
+            </tr>
+            <tr>
+                <td class="l">$\mid, \nmid, \shortmid, \nshortmid$</td>
+                <td class="l">\mid, \nmid, \shortmid, \nshortmid</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<h5>2.2.6 极限 Limits</h5>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="l">样式</th>
+                <th class="l">LaTeX</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="l">$\lim_{n \to \infty}x_n$</td>
+                <td class="l">\lim_{n \to \infty}x_n</td>
+            </tr>
+            <tr>
+                <td class="l">$\textstyle \lim_{n \to \infty}x_n$</td>
+                <td class="l">\textstyle \lim_{n \to \infty}x_n</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<h5>2.2.7 界限与投影 Bounds and Projections</h5>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="l">样式</th>
+                <th class="l">LaTeX</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="l">$\min x, \max y, \inf s, \sup t$</td>
+                <td class="l">\min x, \max y, \inf s, \sup t</td>
+            </tr>
+            <tr>
+                <td class="l">$\lim u, \liminf v, \limsup w$</td>
+                <td class="l">\lim u, \liminf v, \limsup w</td>
+            </tr>
+            <tr>
+                <td class="l">$\dim p, \deg q, \det m, \ker\phi$</td>
+                <td class="l">\dim p, \deg q, \det m, \ker\phi</td>
+            </tr>
+            <tr>
+                <td class="l">$\Pr j, \hom l, \lVert z \rVert, \arg z$</td>
+                <td class="l">\Pr j, \hom l, \lVert z \rVert, \arg z</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<h5>2.2.8 积分 Integral</h5>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="l">样式</th>
+                <th class="l">LaTeX</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="l">$\int\limits_{1}^{3}\frac{e^3/x}{x^2}\, dx$</td>
+                <td class="l">\int\limits_{1}^{3}\frac{e^3/x}{x^2}\, dx</td>
+            </tr>
+            <tr>
+                <td class="l">$\int_{1}^{3}\frac{e^3/x}{x^2}\, dx$</td>
+                <td class="l">\int_{1}^{3}\frac{e^3/x}{x^2}\, dx</td>
+            </tr>
+            <tr>
+                <td class="l">$\textstyle \int\limits_{-N}^{N} e^x dx$</td>
+                <td class="l">\textstyle \int\limits_{-N}^{N} e^x dx</td>
+            </tr>
+            <tr>
+                <td class="l">$\textstyle \int_{-N}^{N} e^x dx$</td>
+                <td class="l">\textstyle \int_{-N}^{N} e^x dx</td>
+            </tr>
+            <tr>
+                <td class="l">$\iint\limits_D dx\,dy$</td>
+                <td class="l">\iint\limits_D dx\,dy</td>
+            </tr>
+            <tr>
+                <td class="l">$\iiint\limits_E dx\,dy\,dz$</td>
+                <td class="l">\iiint\limits_E dx\,dy\,dz</td>
+            </tr>
+            <tr>
+                <td class="l">$\iiiint\limits_F dx\,dy\,dz\,dt$</td>
+                <td class="l">\iiiint\limits_F dx\,dy\,dz\,dt</td>
+            </tr>
+            <tr>
+                <td class="l">$\int_{(x,y)\in C} x^3\, dx + 4y^2\, dy$</td>
+                <td class="l">\int_{(x,y)\in C} x^3\, dx + 4y^2\, dy</td>
+            </tr>
+            <tr>
+                <td class="l">$\oint_{(x,y)\in C} x^3\, dx + 4y^2\, dy$</td>
+                <td class="l">\oint_{(x,y)\in C} x^3\, dx + 4y^2\, dy</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<p><strong>注意：</strong>积分符号可以使用<code>\int_{}^{}</code>命令调用，如需双重积分符号只需将<code>int</code>替换成<code>iint</code>即可，以此类推，最高支持四重。曲线积分可使用<code>\oint</code>命令调用，但曲面积分符号在MathJax环境中并不支持<code>\oiint</code>的用法，但仍可通过<code>\unicode{}</code>命令，即Unicode代码的方式进行调用（前提是您需要在设置中打开Unicode扩展），您可在<a
+        href="www.baidu.com">此页面还没有做</a>查找各类符号的Unicode代码。具体使用方法如下：</p>
+<pre><code>\unicode{8751}  \unicode{x222F}_C %曲面积分符号的Unicode码十进制为8751,十六进制为x222F(注意x标识符)
+  </code></pre>
+<div>$$ {\huge \unicode{8751} \quad \unicode{x222F}}_C \\ \text{曲面积分符号的Unicode码十进制为8751,十六进制为x222F(注意x标识符)} $$</div>
+<pre><code>\unicode{8752}  \unicode{x2230}_C %三维曲面积分符号的Unicode码十进制为8752,十六进制为x2230
+  </code></pre>
+<div>$$ {\huge \unicode{8752} \quad \unicode{x2230}}_C \\ \text{三维曲面积分符号的Unicode码十进制为8752,十六进制为x2230} $$</div>
+<p>其他积分符号：</p>
+<pre><code>\unicode{8753} \unicode{x2231}_c
+  \unicode{8754} \unicode{x2232}_c
+  \unicode{8755} \unicode{x2233}_c
+  </code></pre>
+<div>$$ \huge \unicode{8753} \quad \unicode{x2231}_c\quad \huge \unicode{8754} \quad \unicode{x2232}_c\quad \huge
+    \unicode{8755} \quad\unicode{x2233}_c $$</div>
+<p>&nbsp;</p>
+<h5>2.2.9 其他大型运算 Large operators</h5>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="l">类别</th>
+                <th class="l">样式</th>
+                <th class="l">LaTeX</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="l">求和 Summation</td>
+                <td class="l">$$\sum_{a}^{b}$$</td>
+                <td class="l">\sum_{a}^{b}</td>
+            </tr>
+            <tr>
+                <td class="l">求和 Summation</td>
+                <td class="l">$$\textstyle \sum_{a}^{b}$$</td>
+                <td class="l">\textstyle \sum_{a}^{b}</td>
+            </tr>
+            <tr>
+                <td class="l">连乘积 Product</td>
+                <td class="l">$$\prod_{a}^{b}$$</td>
+                <td class="l">\prod_{a}^{b}</td>
+            </tr>
+            <tr>
+                <td class="l">连乘积 Product</td>
+                <td class="l">$$\textstyle \prod_{a}^{b}$$</td>
+                <td class="l">\textstyle \prod_{a}^{b}</td>
+            </tr>
+            <tr>
+                <td class="l">余积 Coproduct</td>
+                <td class="l">$$\coprod_{a}^{b}$$</td>
+                <td class="l">\coprod_{a}^{b}</td>
+            </tr>
+            <tr>
+                <td class="l">余积 Coproduct</td>
+                <td class="l">$$\textstyle \coprod_{a}^{b}$$</td>
+                <td class="l">\textstyle \coprod_{a}^{b}</td>
+            </tr>
+            <tr>
+                <td class="l">并集 Union</td>
+                <td class="l">$$\bigcup_{a}^{b}$$</td>
+                <td class="l">\bigcup_{a}^{b}</td>
+            </tr>
+            <tr>
+                <td class="l">并集 Union</td>
+                <td class="l">$$\textstyle \bigcup_{a}^{b}$$</td>
+                <td class="l">\textstyle \bigcup_{a}^{b}</td>
+            </tr>
+            <tr>
+                <td class="l">交集 Intersection</td>
+                <td class="l">$$\bigcap_{a}^{b}$$</td>
+                <td class="l">\bigcap_{a}^{b}</td>
+            </tr>
+            <tr>
+                <td class="l">交集 Intersection</td>
+                <td class="l">$$\textstyle \bigcap_{a}^{b}$$</td>
+                <td class="l">\textstyle \bigcap_{a}^{b}</td>
+            </tr>
+            <tr>
+                <td class="l">析取 Disjunction</td>
+                <td class="l">$$\bigvee_{a}^{b}$$</td>
+                <td class="l">\bigvee_{a}^{b}</td>
+            </tr>
+            <tr>
+                <td class="l">析取 Disjunction</td>
+                <td class="l">$$\textstyle \bigvee_{a}^{b}$$</td>
+                <td class="l">\textstyle \bigvee_{a}^{b}</td>
+            </tr>
+            <tr>
+                <td class="l">合取 Conjunction</td>
+                <td class="l">$$\bigwedge_{a}^{b}$$</td>
+                <td class="l">\bigwedge_{a}^{b}</td>
+            </tr>
+            <tr>
+                <td class="l">合取 Conjunction</td>
+                <td class="l">$$\textstyle \bigwedge_{a}^{b}$$</td>
+                <td class="l">\textstyle \bigwedge_{a}^{b}</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<p>&nbsp;</p>
+<h4>2.3 上下标 Sub &amp; Super</h4>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="l">类型</th>
+                <th class="l">样式</th>
+                <th class="l">代码</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="l">上标 Superscript</td>
+                <td class="l">$a^2, a^{x+3}$</td>
+                <td class="l">a^2, a^{x+3}</td>
+            </tr>
+            <tr>
+                <td class="l">下标 Subscript</td>
+                <td class="l">$a_2$</td>
+                <td class="l">a_2</td>
+            </tr>
+            <tr>
+                <td class="l">组合 Grouping</td>
+                <td class="l">$10^{30} a^{2+2}$</td>
+                <td class="l">10^{30} a^{2+2}</td>
+            </tr>
+            <tr>
+                <td class="l">&nbsp;</td>
+                <td class="l">$a_{i,j} b_{f'}$</td>
+                <td class="l">a<em>{i,j} b</em>{f&#39;}</td>
+            </tr>
+            <tr>
+                <td class="l">上下标混合Combining sub &amp; super without and with horizontal separation</td>
+                <td class="l">$x_2^3$</td>
+                <td class="l">x_2^3</td>
+            </tr>
+            <tr>
+                <td class="l">&nbsp;</td>
+                <td class="l">${x_2}^3$</td>
+                <td class="l">{x_2}^3</td>
+            </tr>
+            <tr>
+                <td class="l">上标的上标 Super super</td>
+                <td class="l">$10^{10^{8}}$</td>
+                <td class="l">10^{10^{8}}</td>
+            </tr>
+            <tr>
+                <td class="l">混合标识 Preceding and/or additional sub &amp; super</td>
+                <td class="l">$\sideset{_1^2}{_3^4}X_a^b$</td>
+                <td class="l">\sideset{<em>1^2}{</em>3^4}X_a^b</td>
+            </tr>
+            <tr>
+                <td class="l">&nbsp;</td>
+                <td class="l">${}_1^2\!\Omega_3^4$</td>
+                <td class="l">{}_1^2!\Omega_3^4</td>
+            </tr>
+            <tr>
+                <td class="l">顶标底标 Stacking</td>
+                <td class="l">$\overset{\alpha}{\omega}$</td>
+                <td class="l">\overset{\alpha}{\omega}</td>
+            </tr>
+            <tr>
+                <td class="l">&nbsp;</td>
+                <td class="l">$\underset{\alpha}{\omega}$</td>
+                <td class="l">\underset{\alpha}{\omega}</td>
+            </tr>
+            <tr>
+                <td class="l">&nbsp;</td>
+                <td class="l">$\overset{\alpha}{\underset{\gamma}{\omega}}$</td>
+                <td class="l">\overset{\alpha}{\underset{\gamma}{\omega}}</td>
+            </tr>
+            <tr>
+                <td class="l">&nbsp;</td>
+                <td class="l">$\stackrel{\alpha}{\omega}$</td>
+                <td class="l">\stackrel{\alpha}{\omega}</td>
+            </tr>
+            <tr>
+                <td class="l">导数 Derivatives</td>
+                <td class="l">$x', y'', f', f''$</td>
+                <td class="l">x&#39;, y&#39;&#39;, f&#39;, f&#39;&#39;</td>
+            </tr>
+            <tr>
+                <td class="l">&nbsp;</td>
+                <td class="l">$x^\prime, y^{\prime\prime}$</td>
+                <td class="l">x^\prime, y^{\prime\prime}</td>
+            </tr>
+            <tr>
+                <td class="l">导数Derivative dots</td>
+                <td class="l">$\dot{x}, \ddot{x}$</td>
+                <td class="l">\dot{x}, \ddot{x}</td>
+            </tr>
+            <tr>
+                <td class="l">下划线、上划线与向量<br />Underlines, overlines, vectors</td>
+                <td class="l">$\hat a \ \bar b \ \vec c$</td>
+                <td class="l">\hat a \ \bar b \ \vec c</td>
+            </tr>
+            <tr>
+                <td class="l">&nbsp;</td>
+                <td class="l">$\overrightarrow{a b} \ \overleftarrow{c d} \ \widehat{d e f}$</td>
+                <td class="l">\overrightarrow{a b} \ \overleftarrow{c d} \ \widehat{d e f}</td>
+            </tr>
+            <tr>
+                <td class="l">&nbsp;</td>
+                <td class="l">$\overline{g h i} \ \underline{j k l}$</td>
+                <td class="l">\overline{g h i} \ \underline{j k l}</td>
+            </tr>
+            <tr>
+                <td class="l">弧度 Arc (workaround)</td>
+                <td class="l">$\overset{\frown} {AB}$</td>
+                <td class="l">\overset{\frown} {AB}</td>
+            </tr>
+            <tr>
+                <td class="l">箭头 Arrows</td>
+                <td class="l">$A \xleftarrow{n+\mu-1} B \xrightarrow[T]{n\pm i-1} C$</td>
+                <td class="l">A \xleftarrow{n+\mu-1} B \xrightarrow[T]{n\pm i-1} C</td>
+            </tr>
+            <tr>
+                <td class="l">大括号 Overbraces</td>
+                <td class="l">$\overbrace{ 1+2+\cdots+100 }^{5050}$</td>
+                <td class="l">\overbrace{ 1+2+\cdots+100 }^{5050}</td>
+            </tr>
+            <tr>
+                <td class="l">底部大括号 Underbraces</td>
+                <td class="l">$\underbrace{ a+b+\cdots+z }_{26}$</td>
+                <td class="l">\underbrace{ a+b+\cdots+z }_{26}</td>
+            </tr>
+            <tr>
+                <td class="l">求和运算 Sum</td>
+                <td class="l">$$\sum_{k=1}^N k^2$$</td>
+                <td class="l">\sum_{k=1}^N k^2</td>
+            </tr>
+            <tr>
+                <td class="l">文本模式下的求和运算 Sum (force \textstyle)</td>
+                <td class="l">$$\textstyle \sum_{k=1}^N k^2$$</td>
+                <td class="l">\textstyle \sum_{k=1}^N k^2</td>
+            </tr>
+            <tr>
+                <td class="l">分式中的求和运算 Sum in a fraction (default \textstyle)</td>
+                <td class="l">$$\frac{\sum_{k=1}^N k^2}{a}$$</td>
+                <td class="l">\frac{\sum_{k=1}^N k^2}{a}</td>
+            </tr>
+            <tr>
+                <td class="l">分式中的求和运算 Sum in a fraction (force \displaystyle)</td>
+                <td class="l">$$\frac{\displaystyle \sum_{k=1}^N k^2}{a}$$</td>
+                <td class="l">\frac{\displaystyle \sum_{k=1}^N k^2}{a}</td>
+            </tr>
+            <tr>
+                <td class="l">分式中的求和运算 Sum in a fraction (alternative limits style)</td>
+                <td class="l">$$\frac{\sum\limits^{^N}_{k=1} k^2}{a}$$</td>
+                <td class="l">\frac{\sum\limits^{^N}_{k=1} k^2}{a}</td>
+            </tr>
+            <tr>
+                <td class="l">乘积运算 Product</td>
+                <td class="l">$$\prod_{i=1}^N x_i$$</td>
+                <td class="l">\prod_{i=1}^N x_i</td>
+            </tr>
+            <tr>
+                <td class="l">乘积运算 Product (force \textstyle)</td>
+                <td class="l">$$\textstyle \prod_{i=1}^N x_i$$</td>
+                <td class="l">\textstyle \prod_{i=1}^N x_i</td>
+            </tr>
+            <tr>
+                <td class="l">副乘运算 Coproduct</td>
+                <td class="l">$$\coprod_{i=1}^N x_i$$</td>
+                <td class="l">\coprod_{i=1}^N x_i</td>
+            </tr>
+            <tr>
+                <td class="l">副乘运算 Coproduct (force \textstyle)</td>
+                <td class="l">$$\textstyle \coprod_{i=1}^N x_i$$</td>
+                <td class="l">\textstyle \coprod_{i=1}^N x_i</td>
+            </tr>
+            <tr>
+                <td class="l">极限 Limit</td>
+                <td class="l">$$\lim_{n \to \infty}x_n$$</td>
+                <td class="l">\lim_{n \to \infty}x_n</td>
+            </tr>
+            <tr>
+                <td class="l">极限 Limit (force \textstyle)</td>
+                <td class="l">$$\textstyle \lim_{n \to \infty}x_n$$</td>
+                <td class="l">\textstyle \lim_{n \to \infty}x_n</td>
+            </tr>
+            <tr>
+                <td class="l">积分 Integral</td>
+                <td class="l">$$\int\limits_{1}^{3}\frac{e^3/x}{x^2}\, dx$$</td>
+                <td class="l">\int\limits_{1}^{3}\frac{e^3/x}{x^2}\, dx</td>
+            </tr>
+            <tr>
+                <td class="l">积分 Integral (alternative limits style)</td>
+                <td class="l">$$\int_{1}^{3}\frac{e^3/x}{x^2}\, dx$$</td>
+                <td class="l">\int_{1}^{3}\frac{e^3/x}{x^2}\, dx</td>
+            </tr>
+            <tr>
+                <td class="l">积分 Integral (force \textstyle)</td>
+                <td class="l">$$\textstyle \int\limits_{-N}^{N} e^x dx$$</td>
+                <td class="l">\textstyle \int\limits_{-N}^{N} e^x dx</td>
+            </tr>
+            <tr>
+                <td class="l">积分 Integral (force \textstyle, alternative limits style)</td>
+                <td class="l">$$\textstyle \int_{-N}^{N} e^x dx$$</td>
+                <td class="l">\textstyle \int_{-N}^{N} e^x dx</td>
+            </tr>
+            <tr>
+                <td class="l">双重积分 Double integral</td>
+                <td class="l">$$\iint\limits_D dx\,dy$$</td>
+                <td class="l">\iint\limits_D dx\,dy</td>
+            </tr>
+            <tr>
+                <td class="l">三重积分 Triple integral</td>
+                <td class="l">$$\iiint\limits_E dx\,dy\,dz$$</td>
+                <td class="l">\iiint\limits_E dx\,dy\,dz</td>
+            </tr>
+            <tr>
+                <td class="l">四重积分 Quadruple integral</td>
+                <td class="l">$$\iiiint\limits_F dx\,dy\,dz\,dt$$</td>
+                <td class="l">\iiiint\limits_F dx\,dy\,dz\,dt</td>
+            </tr>
+            <tr>
+                <td class="l">路径积分 Line or path integral</td>
+                <td class="l">$$\int_{(x,y)\in C} x^3\, dx + 4y^2\, dy$$</td>
+                <td class="l">\int_{(x,y)\in C} x^3\, dx + 4y^2\, dy</td>
+            </tr>
+            <tr>
+                <td class="l">环路积分 Closed line or path integral</td>
+                <td class="l">$$\oint_{(x,y)\in C} x^3\, dx + 4y^2\, dy$$</td>
+                <td class="l">\oint_{(x,y)\in C} x^3\, dx + 4y^2\, dy</td>
+            </tr>
+            <tr>
+                <td class="l">交集 Intersections</td>
+                <td class="l">$$\bigcap_{i=1}^n E_i$$</td>
+                <td class="l">\bigcap_{i=1}^n E_i</td>
+            </tr>
+            <tr>
+                <td class="l">并集 Unions</td>
+                <td class="l">$$\bigcup_{i=1}^n E_i$$</td>
+                <td class="l">\bigcup_{i=1}^n E_i</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<p>&nbsp;</p>
+<h4>2.4 矩阵与多行列式 Matrices &amp; Multilines</h4>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="l">类型</th>
+                <th class="l">样式</th>
+                <th class="l">LaTeX</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="l">二项式系数<br />Binomial coefficients</td>
+                <td class="l">$\binom{n}{k}$</td>
+                <td class="l">\binom{n}{k}</td>
+            </tr>
+            <tr>
+                <td class="l">小型二项式系数<br />Small binomial coefficients (force \textstyle)</td>
+                <td class="l">$\tbinom{n}{k}$</td>
+                <td class="l">\tbinom{n}{k}</td>
+            </tr>
+            <tr>
+                <td class="l">大型二项式系数<br />Large (normal) binomial coefficients (force \displaystyle)</td>
+                <td class="l">$\dbinom{n}{k}$</td>
+                <td class="l">\dbinom{n}{k}</td>
+            </tr>
+            <tr>
+                <td class="l">矩阵<br />Matrices</td>
+                <td class="l">$\begin{matrix} x & y \\z & v\end{matrix}$</td>
+                <td class="l">\begin{matrix}<br />x &amp; y \\ <br />z &amp; v<br />\end{matrix}</td>
+            </tr>
+            <tr>
+                <td class="l">&nbsp;</td>
+                <td class="l">$\begin{vmatrix} x & y \\ z & v \end{vmatrix}$</td>
+                <td class="l">\begin{vmatrix}<br />x &amp; y \\<br />z &amp; v<br />\end{vmatrix}</td>
+            </tr>
+            <tr>
+                <td class="l">&nbsp;</td>
+                <td class="l">$\begin{Vmatrix} x & y \\ z & v \end{Vmatrix} $</td>
+                <td class="l">&quot;\begin{Vmatrix}<br />x &amp; y \\<br />z &amp; v<br />\end{Vmatrix}</td>
+            </tr>
+            <tr>
+                <td class="l">&nbsp;</td>
+                <td class="l">$\begin{bmatrix} 0 & \cdots & 0 \\ \vdots & \ddots & \vdots \\ 0 & \cdots & 0
+                    \end{bmatrix}$</td>
+                <td class="l">\begin{bmatrix}<br />0 &amp; \cdots &amp; 0 \\<br />\vdots &amp; \ddots &amp; \vdots
+                    \\<br />0 &amp; \cdots &amp; 0<br />\end{bmatrix}</td>
+            </tr>
+            <tr>
+                <td class="l">&nbsp;</td>
+                <td class="l">$\begin{Bmatrix} x & y \\ z & v \end{Bmatrix}$</td>
+                <td class="l">\begin{Bmatrix}<br />x &amp; y \\<br />z &amp; v<br />\end{Bmatrix}</td>
+            </tr>
+            <tr>
+                <td class="l">&nbsp;</td>
+                <td class="l">$\begin{pmatrix} x & y \\ z & v \end{pmatrix}$</td>
+                <td class="l">\begin{pmatrix}<br />x &amp; y \\<br />z &amp; v<br />\end{pmatrix}</td>
+            </tr>
+            <tr>
+                <td class="l">&nbsp;</td>
+                <td class="l">$\bigl( \begin{smallmatrix} a&b\\ c&d \end{smallmatrix} \bigr)$</td>
+                <td class="l">\bigl( \begin{smallmatrix}<br />a&amp;b\\ <br />c&amp;d<br />\end{smallmatrix} \bigr)</td>
+            </tr>
+            <tr>
+                <td class="l">条件定义<br />Case distinctions</td>
+                <td class="l">$f(n) =\begin{cases} n/2, & \text{if }n\text{ is even} \\ 3n+1, & \text{if }n\text{ is
+                    odd} \end{cases}$</td>
+                <td class="l">f(n) =<br />\begin{cases}<br />n/2, &amp; \text{if }n\text{ is even} \\<br />3n+1, &amp;
+                    \text{if }n\text{ is odd}<br />\end{cases}</td>
+            </tr>
+            <tr>
+                <td class="l">多行等式<br />Multiline equations</td>
+                <td class="l">$\begin{align} f(x) & = (a+b)^2 \\ & = a^2+2ab+b^2 \\ \end{align}$</td>
+                <td class="l">\begin{align} <br />f(x) &amp; = (a+b)^2\\<br />&amp; = a^2+2ab+b^2 \\<br />\end{align}
+                </td>
+            </tr>
+            <tr>
+                <td class="l">&nbsp;</td>
+                <td class="l">$\begin{alignat}{2} f(x) & = (a-b)^2 \\ & = a^2-2ab+b^2 \\ \end{alignat}$</td>
+                <td class="l">\begin{alignat}{2}<br />f(x) &amp; = (a-b)^2 \\<br />&amp; = a^2-2ab+b^2
+                    \\<br />\end{alignat}</td>
+            </tr>
+            <tr>
+                <td class="l">Multiline equations (must define number of columns used ({lcl})) (should not be used
+                    unless needed)</td>
+                <td class="l">$\begin{array}{lcl} z & = & a \\ f(x,y,z) & = & x + y + z \end{array}$</td>
+                <td class="l">\begin{array}{lcl}<br />z &amp; = &amp; a \\<br />f(x,y,z) &amp; = &amp; x + y +
+                    z<br />\end{array}</td>
+            </tr>
+            <tr>
+                <td class="l">&nbsp;</td>
+                <td class="l">$\begin{array}{lcr} z & = & a \\ f(x,y,z) & = & x + y + z \end{array}$</td>
+                <td class="l">\begin{array}{lcr}<br />z &amp; = &amp; a \\<br />f(x,y,z) &amp; = &amp; x + y +
+                    z<br />\end{array}</td>
+            </tr>
+            <tr>
+                <td class="l">方程组<br />Simultaneous equations</td>
+                <td class="l">$\begin{cases} 3x + 5y + z \\ 7x - 2y + 4z \\ -6x + 3y + 2z \end{cases}$</td>
+                <td class="l">\begin{cases}<br />3x + 5y + z \\<br />7x - 2y + 4z \\<br />-6x + 3y + 2z<br />\end{cases}
+                </td>
+            </tr>
+            <tr>
+                <td class="l">数组<br />Arrays</td>
+                <td class="l">$\begin{array}{ | c | c | c | } a & b & S \\ \hline 0&0&1\\ 0&1&1\\ 1&0&1\\ 1&1&0\\
+                    \end{array}$</td>
+                <td class="l">\begin{array}{ | c | c | c | } a &amp; b &amp; S
+                    \\<br />\hline<br />0&amp;0&amp;1\\<br />0&amp;1&amp;1\\<br />1&amp;0&amp;1\\<br />1&amp;1&amp;0\\<br />\end{array}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<h4>2.5 括号 Brackets</h4>
+<p>常用的括号符号例如<code>( )[ ]{ }……</code>这些也可以在输入环境中直接使用：</p>
+<pre><code>2(x+y)=z
+  </code></pre>
+<div>$$ 2(x+y)=z $$</div>
+<p>但如果是在较大的表达式中这些符号就显得不合适了</p>
+<pre><code>( \frac{\pi}{2} )^n
+  </code></pre>
+<div>$$ ( \frac{\pi}{2} )^n $$</div>
+<p>正确用法应配合<code>\left</code>和<code>\right</code>命令使用。</p>
+<pre><code>\left ( \frac{\pi}{2} \right )^n
+  </code></pre>
+<div>$$ \left ( \frac{\pi}{2} \right )^n $$</div>
+<p>具体可参考下表。</p>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="l">类型</th>
+                <th class="l">样式</th>
+                <th class="l">LaTeX</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="l">圆括号、小括号<br />Parentheses</td>
+                <td class="l">$\left ( \frac{a}{b} \right )$</td>
+                <td class="l">\left ( \frac{a}{b} \right )</td>
+            </tr>
+            <tr>
+                <td class="l">方括号、中括号<br />Brackets</td>
+                <td class="l">$\left [ \frac{a}{b} \right ] \quad \left \lbrack \frac{a}{b} \right \rbrack$</td>
+                <td class="l">\left [ \frac{a}{b} \right ] \quad<br />\left \lbrack \frac{a}{b} \right \rbrack</td>
+            </tr>
+            <tr>
+                <td class="l">花括号、大括号<br />Braces</td>
+                <td class="l">$\left \{ \frac{a}{b} \right \} \quad \left \lbrace \frac{a}{b} \right \rbrace$</td>
+                <td class="l">\left { \frac{a}{b} \right } \quad<br />\left \lbrace \frac{a}{b} \right \rbrace</td>
+            </tr>
+            <tr>
+                <td class="l">角括号<br />Angle brackets</td>
+                <td class="l">$\left \langle \frac{a}{b} \right \rangle$</td>
+                <td class="l">\left \langle \frac{a}{b} \right \rangle</td>
+            </tr>
+            <tr>
+                <td class="l">单竖线和双竖线<br />Bars and double bars</td>
+                <td class="l">$\left | \frac{a}{b} \right \vert \quad \left \Vert \frac{c}{d} \right \|$</td>
+                <td class="l">\left | \frac{a}{b} \right \vert \quad \left \Vert \frac{c}{d} \right |</td>
+            </tr>
+            <tr>
+                <td class="l">取整函数与取顶函数<br />Floor and ceiling functions:</td>
+                <td class="l">$\left \lfloor \frac{a}{b} \right \rfloor \quad \left \lceil \frac{c}{d} \right \rceil$
+                </td>
+                <td class="l">\left \lfloor \frac{a}{b} \right \rfloor \quad<br />\left \lceil \frac{c}{d} \right \rceil
+                </td>
+            </tr>
+            <tr>
+                <td class="l">斜线与反斜线<br />Slashes and backslashes</td>
+                <td class="l">$\left / \frac{a}{b} \right \backslash$</td>
+                <td class="l">\left / \frac{a}{b} \right \backslash</td>
+            </tr>
+            <tr>
+                <td class="l">上下箭头<br />Up, down, and up-down arrows</td>
+                <td class="l">$\left \uparrow \frac{a}{b} \right \downarrow \quad \left \Uparrow \frac{a}{b} \right
+                    \Downarrow \quad \left \updownarrow \frac{a}{b} \right \Updownarrow$</td>
+                <td class="l">\left \uparrow \frac{a}{b} \right \downarrow \quad<br />\left \Uparrow \frac{a}{b} \right
+                    \Downarrow \quad<br />\left \updownarrow \frac{a}{b} \right \Updownarrow</td>
+            </tr>
+            <tr>
+                <td class="l">混合括号<br />Delimiters can be mixed,as long as \left and \right match</td>
+                <td class="l">$\left [ 0,1 \right ) \left \langle \psi \right | $</td>
+                <td class="l">\left [ 0,1 \right )<br />\left \langle \psi \right</td>
+            </tr>
+            <tr>
+                <td class="l">如果您不希望某一侧括号显示，可以使用\left. 和 \right.（带有英文句号）<br />Use \left. and \right. if you do not want
+                    a delimiter to appear</td>
+                <td class="l">$\left . \frac{A}{B} \right \} \to X$</td>
+                <td class="l">\left . \frac{A}{B} \right } \to X</td>
+            </tr>
+            <tr>
+                <td class="l" rowspan="7">括号的大小<br />Size of the delimiters (add &quot;l&quot; or &quot;r&quot; to
+                    indicate the side for proper spacing)</td>
+                <td class="l">$( \bigl( \Bigl( \biggl( \Biggl( \dots \Biggr] \biggr] \Bigr] \bigr] ]$</td>
+                <td class="l">( \bigl( \Bigl( \biggl( \Biggl( \dots \Biggr] \biggr] \Bigr] \bigr] ]</td>
+            </tr>
+            <tr>
+                <!-- <td class="l">&nbsp;</td> -->
+                <td class="l">$\{ \bigl\{ \Bigl\{ \biggl\{ \Biggl\{ \dots \Biggr\rangle \biggr\rangle \Bigr\rangle
+                    \bigr\rangle \rangle$</td>
+                <td class="l">{ \bigl{ \Bigl{ \biggl{ \Biggl{ \dots<br />\Biggr\rangle \biggr\rangle \Bigr\rangle
+                    \bigr\rangle \rangle</td>
+            </tr>
+            <tr>
+                <!-- <td class="l">&nbsp;</td> -->
+                <td class="l">$\| \big\| \Big\| \bigg\| \Bigg\| \dots \Bigg | \bigg | \Big | \big | |$</td>
+                <td class="l">| \big| \Big| \bigg| \Bigg| \dots \Bigg | \bigg | \Big | \big |</td>
+            </tr>
+            <tr>
+                <!-- <td class="l">&nbsp;</td> -->
+                <td class="l">$\lfloor \bigl\lfloor \Bigl\lfloor \biggl\lfloor \Biggl\lfloor \dots \Biggr\rceil
+                    \biggr\rceil \Bigr\rceil \bigr\rceil \rceil$</td>
+                <td class="l">\lfloor \bigl\lfloor \Bigl\lfloor \biggl\lfloor \Biggl\lfloor \dots<br />\Biggr\rceil
+                    \biggr\rceil \Bigr\rceil \bigr\rceil \rceil</td>
+            </tr>
+            <tr>
+                <!-- <td class="l">&nbsp;</td> -->
+                <td class="l">$\uparrow \big\uparrow \Big\uparrow \bigg\uparrow \Bigg\uparrow \dots \Bigg\Downarrow
+                    \bigg\Downarrow \Big\Downarrow \big\Downarrow \Downarrow$</td>
+                <td class="l">\uparrow \big\uparrow \Big\uparrow \bigg\uparrow \Bigg\uparrow \dots<br />\Bigg\Downarrow
+                    \bigg\Downarrow \Big\Downarrow \big\Downarrow \Downarrow</td>
+            </tr>
+            <tr>
+                <!-- <td class="l">&nbsp;</td> -->
+                <td class="l">$\updownarrow \big\updownarrow \Big\updownarrow \bigg\updownarrow \Bigg\updownarrow \dots
+                    \Bigg\Updownarrow \bigg\Updownarrow \Big\Updownarrow \big\Updownarrow \Updownarrow$</td>
+                <td class="l">\updownarrow \big\updownarrow \Big\updownarrow \bigg\updownarrow \Bigg\updownarrow
+                    \dots<br />\Bigg\Updownarrow \bigg\Updownarrow \Big\Updownarrow \big\Updownarrow \Updownarrow</td>
+            </tr>
+            <tr>
+                <!-- <td class="l">&nbsp;</td> -->
+                <td class="l">$/ \big/ \Big/ \bigg/ \Bigg/ \dots \Bigg\backslash \bigg\backslash \Big\backslash
+                    \big\backslash \backslash$</td>
+                <td class="l">/ \big/ \Big/ \bigg/ \Bigg/ \dots <br />\Bigg\backslash \bigg\backslash \Big\backslash
+                    \big\backslash \backslash</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<p>&nbsp;</p>
+<h4>2.6 空格与换行 Spacing &amp; Line breaking</h4>
+<h5>2.6.1 空格 Spacing</h5>
+<p>MathJax能够自动处理大多数空格间距的大小，但如果您需要自己控制，可参考下表。</p>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="c">序号</th>
+                <th class="c">样式</th>
+                <th class="l">LaTeX</th>
+                <th class="l">中文说明英文说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="c">1</td>
+                <td class="c">$a \qquad b$</td>
+                <td class="l">a \qquad b</td>
+                <td class="l">双空格</td>
+            </tr>
+            <tr>
+                <td class="c">2</td>
+                <td class="c">$a \quad b$</td>
+                <td class="l">a \quad b</td>
+                <td class="l">单空格</td>
+            </tr>
+            <tr>
+                <td class="c">3</td>
+                <td class="c">$a\ b$</td>
+                <td class="l">a\ b</td>
+                <td class="l">字符空格</td>
+            </tr>
+            <tr>
+                <td class="c">4</td>
+                <td class="c">$a \text{ } b$</td>
+                <td class="l">a \text{ } b</td>
+                <td class="l">文本模式中的字符空格</td>
+            </tr>
+            <tr>
+                <td class="c">5</td>
+                <td class="c">$a\;b$</td>
+                <td class="l">a\;b</td>
+                <td class="l">大空格</td>
+            </tr>
+            <tr>
+                <td class="c">6</td>
+                <td class="c">$a\,b$</td>
+                <td class="l">a\,b</td>
+                <td class="l">小空格</td>
+            </tr>
+            <tr>
+                <td class="c">7</td>
+                <td class="c">$ab$</td>
+                <td class="l">ab</td>
+                <td class="l">极小空格(用于乘因子)</td>
+            </tr>
+            <tr>
+                <td class="c">8</td>
+                <td class="c">$a b$</td>
+                <td class="l">a b</td>
+                <td class="l">极小空格(用于区分其它语法)</td>
+            </tr>
+            <tr>
+                <td class="c">9</td>
+                <td class="c">$\mathit{ab}$</td>
+                <td class="l">\mathit{ab}</td>
+                <td class="l">没有空格(用于多字母变量)</td>
+            </tr>
+            <tr>
+                <td class="c">10</td>
+                <td class="c">$a\!b$</td>
+                <td class="l">a!b</td>
+                <td class="l">负空格</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<h5>2.6.2 换行 Line breaking</h5>
+<p>在MathJax3.0中取消了使用<code>\\</code>进行强制换行的功能，因此本页面也采取同样的逻辑，默认为单行公式环境。<code>\\</code>强制换行命令只在支持多行编辑的数学环境中才起作用，如<code>\eqnarray</code>环境、<code>\align</code>环境、<code>\array</code>环境、<code>\matrix</code>环境等等。如您需要显示多行公式，请在此类环境中输入公式。
+</p>
+<h4>2.7 颜色 Colors</h4>
+<h5>2.7.1 字体颜色 Font colors</h5>
+<p>在公式中可以使用<code>\color{options}{math}</code>来调用颜色命令，第一个参数为颜色，第二个参数为公式或文本内容。例如:</p>
+<pre><code>{\color{Blue}x^2}+{\color{Orange}2x}-{\color{LimeGreen}1}
+  </code></pre>
+<div>$$ {\color{Blue}x^2}+{\color{Orange}2x}-{\color{LimeGreen}1} $$</div>
+<pre><code>x_{1,2}=\frac{{\color{Blue}-b}\pm\sqrt{\color{Red}b^2-4ac}}{\color{Green}2a }
+  </code></pre>
+<div>$$ x_{1,2}=\frac{{\color{Blue}-b}\pm\sqrt{\color{Red}b^2-4ac}}{\color{Green}2a } $$</div>
+<p><strong>注意：</strong> 使用<code>\color</code>命令时，请将需要设置颜色的部分用<code>{ }</code>整体扩住，以表明<code>\color</code>函数作用范围。</p>
+<h5>2.7.2 背景颜色 Background color</h5>
+<p>在文本环境中可以使用<code>\colorbox{options}{text}</code>来调用背景颜色命令，第一个参数为颜色，第二个颜色为文本内容。例如：</p>
+<pre><code>\colorbox{yellow}{Thistext}
+  </code></pre>
+<div>$$ \colorbox{yellow}{text} $$</div>
+<p><strong>注意：</strong> 若需要在数学环境中使用<code>\colorbox{}{}</code>，请在第二个参数内加入<code>$\displaystyle + 公式$</code>，例如：</p>
+<pre><code>\colorbox{yellow}{$\displaystyle \frac{a}{b}$}`
+  </code></pre>
+<div>$$ \colorbox{yellow}{$\displaystyle \frac{a}{b}$} $$</div>
+<p>或者您可以使用 <strong>Bbox扩展</strong> 来替换<code>\colorbox</code>命令，详见下条2.7.3。</p>
+<h5>2.7.3 用Bbox扩展设置背景颜色 Setting background color with Bbox</h5>
+<p>Bbox扩展是一款自定义宏包，如需使用请在公式页面右上角【设置】处勾选后使用。 具体用法如下：</p>
+<h6>2.7.3.1 设置背景颜色 Setting Background color</h6>
+<p>在公式中可以使用<code>\bbox[options]{math}</code>来调用背景颜色命令，第一个参数为颜色或大小，需注意用<code>[ ]</code>包围，第二个参数为公式。例如:</p>
+<pre><code>\bbox[red]{x+y}
+  </code></pre>
+<div>$$ \bbox[red]{x+y} $$</div>
+<h6>2.7.3.2 调整背景大小 Setting Background Size</h6>
+<p>默认情况下，背景大小为作用范围的最大边界，如需扩大背景，可在第一个参数中加入大小信息，例如：</p>
+<pre><code>\bbox[2pt]{x+y}  %设置透明背景，并增加2pt额外距离
+  </code></pre>
+<div>$$ \bbox[2pt]{x+y} $$</div>
+<pre><code>\bbox[red,5pt]{x+y}  %设置红色背景，并增加5pt额外距离
+  </code></pre>
+<div>$$ \bbox[red,5pt]{x+y} $$</div>
+<h5>2.7.4 默认支持颜色 Colors supported</h5>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="c" colspan="4">支持颜色</th>
+                <!-- <th class="l">持</th> -->
+                <!-- <th class="l">颜</th> -->
+                <!-- <th class="l">色</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="l">${\color{Apricot}Apricot}$</td>
+                <td class="l">${\color{Emerald}Emerald}$</td>
+                <td class="l">${\color{OliveGreen}OliveGreen}$</td>
+                <td class="l">${\color{RubineRed}RubineRed}$</td>
+            </tr>
+            <tr>
+                <td class="l">${\color{Aquamarine}Aquamarine}$</td>
+                <td class="l">${\color{ForestGreen}ForestGreen}$</td>
+                <td class="l">${\color{Orange}Orange}$</td>
+                <td class="l">${\color{Salmon}Salmon}$</td>
+            </tr>
+            <tr>
+                <td class="l">${\color{Bittersweet}Bittersweet}$</td>
+                <td class="l">${\color{Fuchsia}Fuchsia}$</td>
+                <td class="l">${\color{OrangeRed}OrangeRed}$</td>
+                <td class="l">${\color{SeaGreen}SeaGreen}$</td>
+            </tr>
+            <tr>
+                <td class="l">${\color{Black}Black}$</td>
+                <td class="l">${\color{Goldenrod}Goldenrod}$</td>
+                <td class="l">${\color{Orchid}Orchid}$</td>
+                <td class="l">${\color{Sepia}Sepia}$</td>
+            </tr>
+            <tr>
+                <td class="l">${\color{Blue}Blue}$</td>
+                <td class="l">${\color{Gray}Gray}$</td>
+                <td class="l">${\color{Peach}Peach}$</td>
+                <td class="l">${\color{SkyBlue}SkyBlue}$</td>
+            </tr>
+            <tr>
+                <td class="l">${\color{BlueGreen}BlueGreen}$</td>
+                <td class="l">${\color{Green}Green}$</td>
+                <td class="l">${\color{Periwinkle}Periwinkle}$</td>
+                <td class="l">${\color{SpringGreen}SpringGreen}$</td>
+            </tr>
+            <tr>
+                <td class="l">${\color{BlueViolet}BlueViolet}$</td>
+                <td class="l">${\color{GreenYellow}GreenYellow}$</td>
+                <td class="l">${\color{PineGreen}PineGreen}$</td>
+                <td class="l">${\color{Tan}Tan}$</td>
+            </tr>
+            <tr>
+                <td class="l">${\color{BrickRed}BrickRed}$</td>
+                <td class="l">${\color{JungleGreen}JungleGreen}$</td>
+                <td class="l">${\color{Plum}Plum}$</td>
+                <td class="l">${\color{TealBlue}TealBlue}$</td>
+            </tr>
+            <tr>
+                <td class="l">${\color{Brown}Brown}$</td>
+                <td class="l">${\color{Lavender}Lavender}$</td>
+                <td class="l">${\color{ProcessBlue}ProcessBlue}$</td>
+                <td class="l">${\color{Thistle}Thistle}$</td>
+            </tr>
+            <tr>
+                <td class="l">${\color{BurntOrange}BurntOrange}$</td>
+                <td class="l">${\color{LimeGreen}LimeGreen}$</td>
+                <td class="l">${\color{Purple}Purple}$</td>
+                <td class="l">${\color{Turquoise}Turquoise}$</td>
+            </tr>
+            <tr>
+                <td class="l">${\color{CadetBlue}CadetBlue}$</td>
+                <td class="l">${\color{Magenta}Magenta}$</td>
+                <td class="l">${\color{RawSienna}RawSienna}$</td>
+                <td class="l">${\color{Violet}Violet}$</td>
+            </tr>
+            <tr>
+                <td class="l">${\color{CarnationPink}CarnationPink}$</td>
+                <td class="l">${\color{Mahogany}Mahogany}$</td>
+                <td class="l">${\color{Red}Red}$</td>
+                <td class="l">${\color{VioletRed}VioletRed}$</td>
+            </tr>
+            <tr>
+                <td class="l">${\color{Cerulean}Cerulean}$</td>
+                <td class="l">${\color{Maroon}Maroon}$</td>
+                <td class="l">${\color{RedOrange}RedOrange}$</td>
+                <td class="l">${\color{White}White}$</td>
+            </tr>
+            <tr>
+                <td class="l">${\color{CornflowerBlue}CornflowerBlue}$</td>
+                <td class="l">${\color{Melon}Melon}$</td>
+                <td class="l">${\color{RedViolet}RedViolet}$</td>
+                <td class="l">${\color{WildStrawberry}WildStrawberry}$</td>
+            </tr>
+            <tr>
+                <td class="l">${\color{Cyan}Cyan}$</td>
+                <td class="l">${\color{MidnightBlue}MidnightBlue}$</td>
+                <td class="l">${\color{Rhodamine}Rhodamine}$</td>
+                <td class="l">${\color{Yellow}Yellow}$</td>
+            </tr>
+            <tr>
+                <td class="l">${\color{Dandelion}Dandelion}$</td>
+                <td class="l">${\color{Mulberry}Mulberry}$</td>
+                <td class="l">${\color{RoyalBlue}RoyalBlue}$</td>
+                <td class="l">${\color{YellowGreen}YellowGreen}$</td>
+            </tr>
+            <tr>
+                <td class="l">${\color{DarkOrchid}DarkOrchid}$</td>
+                <td class="l">${\color{NavyBlue}NavyBlue}$</td>
+                <td class="l">${\color{RoyalPurple}RoyalPurple}$</td>
+                <td class="l">${\color{YellowOrange}YellowOrange}$</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<h5>2.7.5 使用RGB颜色 Use RGB color</h5>
+<p>如需在<code>\color</code>命令中使用自选RGB颜色，可使用<code>{\color[RGB]{0,0,0} }</code>命令，例如：</p>
+<pre><code>{\color[RGB]{0,200,0} e^{i \pi} + 1 = 0} 
+  </code></pre>
+<div>$$ {\color[RGB]{0,200,0} e^{i \pi} + 1 = 0} $$</div>
+<h5>2.7.6 自定义颜色 Custom colors</h5>
+<p>可使用<code>\definecolor</code>命令进行自定义颜色，例如：</p>
+<pre><code>\definecolor{mygreen}{RGB}{0,200,0} {\color{mygreen}e^{i \pi} + 1 = 0 } 
+  </code></pre>
+<div>$$ \definecolor{mygreen}{RGB}{0,200,0} {\color{mygreen}e^{i \pi} + 1 = 0 } $$</div>
+<h4>2.8 字体字号 Fonts &amp; Size</h4>
+<h5>2.8.1 字体 Fonts</h5>
+<p>如您需要替换公式内容的字体，可以点击工具栏下方的<strong>【字体】</strong>按钮进行相关操作。因有一些特定代码Mathjax3.0并没有相关支持，所以下表仅做参考。</p>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="l">样式</th>
+                <th class="l">LaTeX</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="l">希腊字母 Greek alphabet</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathrm{A} \mathrm{B} \Gamma \Delta \mathrm{E} \mathrm{Z} \mathrm{H} \Theta$</td>
+                <td class="l">\mathrm{A} \mathrm{B} \Gamma \Delta \mathrm{E} \mathrm{Z} \mathrm{H} \Theta</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathrm{I} \mathrm{K} \Lambda \mathrm{M} \mathrm{N} \Xi \mathrm{O} \Pi$</td>
+                <td class="l">\mathrm{I} \mathrm{K} \Lambda \mathrm{M} \mathrm{N} \Xi \mathrm{O} \Pi</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathrm{R} \Sigma \mathrm{T} \Upsilon \Phi \mathrm{X} \Psi \Omega$</td>
+                <td class="l">\mathrm{R} \Sigma \mathrm{T} \Upsilon \Phi \mathrm{X} \Psi \Omega</td>
+            </tr>
+            <tr>
+                <td class="l">$\alpha \beta \gamma \delta \epsilon \zeta \eta \theta$</td>
+                <td class="l">\alpha \beta \gamma \delta \epsilon \zeta \eta \theta</td>
+            </tr>
+            <tr>
+                <td class="l">$\iota \kappa \lambda \mu \nu \xi \omicron \pi$</td>
+                <td class="l">\iota \kappa \lambda \mu \nu \xi \omicron \pi</td>
+            </tr>
+            <tr>
+                <td class="l">$\rho \sigma \tau \upsilon \phi \chi \psi \omega$</td>
+                <td class="l">\rho \sigma \tau \upsilon \phi \chi \psi \omega</td>
+            </tr>
+            <tr>
+                <td class="l">
+                    $\varGamma \varDelta \varTheta \varLambda \varXi \varPi \varSigma \varPhi \varUpsilon \varOmega$
+                </td>
+                <td class="l">
+                    \varGamma \varDelta \varTheta \varLambda \varXi \varPi \varSigma \varPhi \varUpsilon \varOmega</td>
+            </tr>
+            <tr>
+                <td class="l">$\varepsilon \digamma \varkappa \varpi \varrho \varsigma \vartheta \varphi$</td>
+                <td class="l">\varepsilon \digamma \varkappa \varpi \varrho \varsigma \vartheta \varphi</td>
+            </tr>
+            <tr>
+                <td class="l">希伯来字母 Hebrew symbols</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="l">$\aleph \beth \gimel \daleth$</td>
+                <td class="l">\aleph \beth \gimel \daleth</td>
+            </tr>
+            <tr>
+                <td class="l">黑板报体 Blackboard bold/scripts</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathbb{ABCDEFGHI}$</td>
+                <td class="l">\mathbb{ABCDEFGHI}</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathbb{JKLMNOPQR}$</td>
+                <td class="l">\mathbb{JKLMNOPQR}</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathbb{STUVWXYZ}$</td>
+                <td class="l">\mathbb{STUVWXYZ}</td>
+            </tr>
+            <tr>
+                <td class="l">粗体 Boldface</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathbf{ABCDEFGHI}$</td>
+                <td class="l">\mathbf{ABCDEFGHI}</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathbf{JKLMNOPQR}$</td>
+                <td class="l">\mathbf{JKLMNOPQR}</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathbf{STUVWXYZ}$</td>
+                <td class="l">\mathbf{STUVWXYZ}</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathbf{abcdefghijklm}$</td>
+                <td class="l">\mathbf{abcdefghijklm}</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathbf{nopqrstuvwxyz}$</td>
+                <td class="l">\mathbf{nopqrstuvwxyz}</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathbf{0123456789}$</td>
+                <td class="l">\mathbf{0123456789}</td>
+            </tr>
+            <tr>
+                <td class="l">粗体希腊字母 Boldface (Greek)</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="l">$\boldsymbol{\mathrm{A} \mathrm{B} \Gamma \Delta \mathrm{E} \mathrm{Z} \mathrm{H} \Theta}$
+                </td>
+                <td class="l">\boldsymbol{\mathrm{A} \mathrm{B} \Gamma \Delta \mathrm{E} \mathrm{Z} \mathrm{H} \Theta}
+                </td>
+            </tr>
+            <tr>
+                <td class="l">$\boldsymbol{\mathrm{I} \mathrm{K} \Lambda \mathrm{M} \mathrm{N} \Xi \mathrm{O} \Pi}$</td>
+                <td class="l">\boldsymbol{\mathrm{I} \mathrm{K} \Lambda \mathrm{M} \mathrm{N} \Xi \mathrm{O} \Pi}</td>
+            </tr>
+            <tr>
+                <td class="l">$\boldsymbol{\mathrm{R} \Sigma \mathrm{T} \Upsilon \Phi \mathrm{X} \Psi \Omega}$</td>
+                <td class="l">\boldsymbol{\mathrm{R} \Sigma \mathrm{T} \Upsilon \Phi \mathrm{X} \Psi \Omega}</td>
+            </tr>
+            <tr>
+                <td class="l">$\boldsymbol{\alpha \beta \gamma \delta \epsilon \zeta \eta \theta}$</td>
+                <td class="l">\boldsymbol{\alpha \beta \gamma \delta \epsilon \zeta \eta \theta}</td>
+            </tr>
+            <tr>
+                <td class="l">$\boldsymbol{\iota \kappa \lambda \mu \nu \xi \omicron \pi}$</td>
+                <td class="l">\boldsymbol{\iota \kappa \lambda \mu \nu \xi \omicron \pi}</td>
+            </tr>
+            <tr>
+                <td class="l">$\boldsymbol{\rho \sigma \tau \upsilon \phi \chi \psi \omega}$</td>
+                <td class="l">\boldsymbol{\rho \sigma \tau \upsilon \phi \chi \psi \omega}</td>
+            </tr>
+            <tr>
+                <td class="l">$\boldsymbol{\varepsilon\digamma\varkappa\varpi}$</td>
+                <td class="l">\boldsymbol{\varepsilon\digamma\varkappa\varpi}</td>
+            </tr>
+            <tr>
+                <td class="l">$\boldsymbol{\varrho\varsigma\vartheta\varphi}$</td>
+                <td class="l">\boldsymbol{\varrho\varsigma\vartheta\varphi}</td>
+            </tr>
+            <tr>
+                <td class="l">斜体 Italics (拉丁字母默认default for Latin alphabet)</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathit{0123456789}$</td>
+                <td class="l">\mathit{0123456789}</td>
+            </tr>
+            <tr>
+                <td class="l">罗马体 Roman typeface</td>
+                <td class="l">Roman typeface</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathrm{ABCDEFGHI}$</td>
+                <td class="l">\mathrm{ABCDEFGHI}</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathrm{JKLMNOPQR}$</td>
+                <td class="l">\mathrm{JKLMNOPQR}</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathrm{STUVWXYZ}$</td>
+                <td class="l">\mathrm{STUVWXYZ}</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathrm{abcdefghijklm}$</td>
+                <td class="l">\mathrm{abcdefghijklm}</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathrm{nopqrstuvwxyz}$</td>
+                <td class="l">\mathrm{nopqrstuvwxyz}</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathrm{0123456789}$</td>
+                <td class="l">\mathrm{0123456789}</td>
+            </tr>
+            <tr>
+                <td class="l">无衬线体 Sans serif</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathsf{ABCDEFGHI}$</td>
+                <td class="l">\mathsf{ABCDEFGHI}</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathsf{JKLMNOPQR}$</td>
+                <td class="l">\mathsf{JKLMNOPQR}</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathsf{STUVWXYZ}$</td>
+                <td class="l">\mathsf{STUVWXYZ}</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathsf{abcdefghijklm}$</td>
+                <td class="l">\mathsf{abcdefghijklm}</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathsf{nopqrstuvwxyz}$</td>
+                <td class="l">\mathsf{nopqrstuvwxyz}</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathsf{0123456789}$</td>
+                <td class="l">\mathsf{0123456789}</td>
+            </tr>
+            <tr>
+                <td class="l">手写体 Calligraphy/花体 script</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathcal{ABCDEFGHI}$</td>
+                <td class="l">\mathcal{ABCDEFGHI}</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathcal{JKLMNOPQR}$</td>
+                <td class="l">\mathcal{JKLMNOPQR}</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathcal{STUVWXYZ}$</td>
+                <td class="l">\mathcal{STUVWXYZ}</td>
+            </tr>
+            <tr>
+                <td class="l">德文尖角体 Fraktur typeface</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathfrak{ABCDEFGHI}$</td>
+                <td class="l">\mathfrak{ABCDEFGHI}</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathfrak{JKLMNOPQR}$</td>
+                <td class="l">\mathfrak{JKLMNOPQR}</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathfrak{STUVWXYZ}$</td>
+                <td class="l">\mathfrak{STUVWXYZ}</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathfrak{abcdefghijklm}$</td>
+                <td class="l">\mathfrak{abcdefghijklm}</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathfrak{nopqrstuvwxyz}$</td>
+                <td class="l">\mathfrak{nopqrstuvwxyz}</td>
+            </tr>
+            <tr>
+                <td class="l">$\mathfrak{0123456789}$</td>
+                <td class="l">\mathfrak{0123456789}</td>
+            </tr>
+            <tr>
+                <td class="l">小型手写体 Small scriptstyle text</td>
+                <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="l">${\scriptstyle\text{abcdefghijklm}}$</td>
+                <td class="l">{\scriptstyle\text{abcdefghijklm}}</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<h5>2.8.2 字号 Size</h5>
+<figure>
+    <table>
+        <thead>
+            <tr>
+                <th class="l">样式</th>
+                <th class="l">LaTeX</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="l">${\tiny abc巨小tiny}$</td>
+                <td class="l">{\tiny abc巨小tiny}</td>
+            </tr>
+            <tr>
+                <td class="l">${\scriptsize abc超小scriptsize}$</td>
+                <td class="l">{\scriptsize abc超小scriptsize}</td>
+            </tr>
+            <tr>
+                <td class="l">${\small abc小small}$</td>
+                <td class="l">{\small abc小small}</td>
+            </tr>
+            <tr>
+                <td class="l">${\normalsize abc正常normal}$</td>
+                <td class="l">{\normalsize abc正常normal}</td>
+            </tr>
+            <tr>
+                <td class="l">${\large abc大large}$</td>
+                <td class="l">{\large abc大large}</td>
+            </tr>
+            <tr>
+                <td class="l">${\Large abc超大Large}$</td>
+                <td class="l">{\Large abc超大Large}</td>
+            </tr>
+            <tr>
+                <td class="l">${\LARGE abc特大LARGE}$</td>
+                <td class="l">{\LARGE abc特大LARGE}</td>
+            </tr>
+            <tr>
+                <td class="l">${\huge abc巨大huge}$</td>
+                <td class="l">{\huge abc巨大huge}</td>
+            </tr>
+            <tr>
+                <td class="l">${\Huge abc巨无霸Huge}$</td>
+                <td class="l">{\Huge abc巨无霸Huge}</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<p><strong>注意：</strong>如您导出<strong>SVG格式</strong>，理论上字体的整体大小并无用处，因为<strong>SVG</strong>为矢量图，所以大可不必担心图片不清晰的问题，即便是您选择下载<strong>PNG格式</strong>的公式图片，图片整体尺寸也被默认设定为<strong>4K</strong>。所以此处的字号命令只为设置公式<strong>相对大小</strong>时使用，例如：
+</p>
+<pre><code>{\tiny x+y=z}x+y=z{\Huge x+y=z}
+  </code></pre>
+<div>$$ {\tiny x+y=z}x+y=z{\Huge x+y=z} $$</div>
+<p>&nbsp;</p>
+<h4>2.9 TeX扩展包使用 TeX and LaTeX extensions（待整理）</h4>
+<h5>2.9.1 physics扩展包</h5>
+<p>&nbsp;</p>
+<h5>2.9.2 mhchem扩展包</h5>
+<p>mhchem是一款便捷输入化学方程式的扩展包，使用前需要在设置中手动勾选。其具体用法如下：</p>
+<h6>2.9.2.1 引用</h6>
+<p>基本命令为<code>\ce{}</code>，可在<code>{}</code>中输入化学相关符号。</p>
+<h6>2.9.2.2 化学式</h6>
+<p>在化学环境中，数字<code>0123456789</code>默认为下标，<code>+-</code>默认为上标，如需强制上标可使用<code>^</code>符号，例如</p>
+<pre><code>\ce{H2O}  \ce{Sb2O3}  \ce{H+}  \ce{CrO4^2-}  \ce{[AgCl2]-}  \ce{Y^99+}  \ce{Y^{99+}}
+  </code></pre>
+<div>
+    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="54.934ex" height="2.981ex" viewBox="0 -936.9 23652.2 1283.4"
+        role="img" focusable="false" style="vertical-align: -0.805ex; max-width: 100%;">
+        <defs>
+            <path stroke-width="0" id="E1169-MJMAIN-48"
+                d="M128 622Q121 629 117 631T101 634T58 637H25V683H36Q57 680 180 680Q315 680 324 683H335V637H302Q262 636 251 634T233 622L232 500V378H517V622Q510 629 506 631T490 634T447 637H414V683H425Q446 680 569 680Q704 680 713 683H724V637H691Q651 636 640 634T622 622V61Q628 51 639 49T691 46H724V0H713Q692 3 569 3Q434 3 425 0H414V46H447Q489 47 498 49T517 61V332H232V197L233 61Q239 51 250 49T302 46H335V0H324Q303 3 180 3Q45 3 36 0H25V46H58Q100 47 109 49T128 61V622Z">
+            </path>
+            <path stroke-width="0" id="E1169-MJMATHI-58"
+                d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z">
+            </path>
+            <path stroke-width="0" id="E1169-MJMAIN-32"
+                d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z">
+            </path>
+            <path stroke-width="0" id="E1169-MJMAIN-4F"
+                d="M56 340Q56 423 86 494T164 610T270 680T388 705Q521 705 621 601T722 341Q722 260 693 191T617 75T510 4T388 -22T267 3T160 74T85 189T56 340ZM467 647Q426 665 388 665Q360 665 331 654T269 620T213 549T179 439Q174 411 174 354Q174 144 277 61Q327 20 385 20H389H391Q474 20 537 99Q603 188 603 354Q603 411 598 439Q577 592 467 647Z">
+            </path>
+            <path stroke-width="0" id="E1169-MJMAIN-53"
+                d="M55 507Q55 590 112 647T243 704H257Q342 704 405 641L426 672Q431 679 436 687T446 700L449 704Q450 704 453 704T459 705H463Q466 705 472 699V462L466 456H448Q437 456 435 459T430 479Q413 605 329 646Q292 662 254 662Q201 662 168 626T135 542Q135 508 152 480T200 435Q210 431 286 412T370 389Q427 367 463 314T500 191Q500 110 448 45T301 -21Q245 -21 201 -4T140 27L122 41Q118 36 107 21T87 -7T78 -21Q76 -22 68 -22H64Q61 -22 55 -16V101Q55 220 56 222Q58 227 76 227H89Q95 221 95 214Q95 182 105 151T139 90T205 42T305 24Q352 24 386 62T420 155Q420 198 398 233T340 281Q284 295 266 300Q261 301 239 306T206 314T174 325T141 343T112 367T85 402Q55 451 55 507Z">
+            </path>
+            <path stroke-width="0" id="E1169-MJMAIN-62"
+                d="M307 -11Q234 -11 168 55L158 37Q156 34 153 28T147 17T143 10L138 1L118 0H98V298Q98 599 97 603Q94 622 83 628T38 637H20V660Q20 683 22 683L32 684Q42 685 61 686T98 688Q115 689 135 690T165 693T176 694H179V543Q179 391 180 391L183 394Q186 397 192 401T207 411T228 421T254 431T286 439T323 442Q401 442 461 379T522 216Q522 115 458 52T307 -11ZM182 98Q182 97 187 90T196 79T206 67T218 55T233 44T250 35T271 29T295 26Q330 26 363 46T412 113Q424 148 424 212Q424 287 412 323Q385 405 300 405Q270 405 239 390T188 347L182 339V98Z">
+            </path>
+            <path stroke-width="0" id="E1169-MJMAIN-33"
+                d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z">
+            </path>
+            <path stroke-width="0" id="E1169-MJMAIN-2B"
+                d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z">
+            </path>
+            <path stroke-width="0" id="E1169-MJMAIN-43"
+                d="M56 342Q56 428 89 500T174 615T283 681T391 705Q394 705 400 705T408 704Q499 704 569 636L582 624L612 663Q639 700 643 704Q644 704 647 704T653 705H657Q660 705 666 699V419L660 413H626Q620 419 619 430Q610 512 571 572T476 651Q457 658 426 658Q322 658 252 588Q173 509 173 342Q173 221 211 151Q232 111 263 84T328 45T384 29T428 24Q517 24 571 93T626 244Q626 251 632 257H660L666 251V236Q661 133 590 56T403 -21Q262 -21 159 83T56 342Z">
+            </path>
+            <path stroke-width="0" id="E1169-MJMAIN-72"
+                d="M36 46H50Q89 46 97 60V68Q97 77 97 91T98 122T98 161T98 203Q98 234 98 269T98 328L97 351Q94 370 83 376T38 385H20V408Q20 431 22 431L32 432Q42 433 60 434T96 436Q112 437 131 438T160 441T171 442H174V373Q213 441 271 441H277Q322 441 343 419T364 373Q364 352 351 337T313 322Q288 322 276 338T263 372Q263 381 265 388T270 400T273 405Q271 407 250 401Q234 393 226 386Q179 341 179 207V154Q179 141 179 127T179 101T180 81T180 66V61Q181 59 183 57T188 54T193 51T200 49T207 48T216 47T225 47T235 46T245 46H276V0H267Q249 3 140 3Q37 3 28 0H20V46H36Z">
+            </path>
+            <path stroke-width="0" id="E1169-MJMAIN-34"
+                d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z">
+            </path>
+            <path stroke-width="0" id="E1169-MJMAIN-2212"
+                d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path>
+            <path stroke-width="0" id="E1169-MJMAIN-5B" d="M118 -250V750H255V710H158V-210H255V-250H118Z"></path>
+            <path stroke-width="0" id="E1169-MJMAIN-41"
+                d="M255 0Q240 3 140 3Q48 3 39 0H32V46H47Q119 49 139 88Q140 91 192 245T295 553T348 708Q351 716 366 716H376Q396 715 400 709Q402 707 508 390L617 67Q624 54 636 51T687 46H717V0H708Q699 3 581 3Q458 3 437 0H427V46H440Q510 46 510 64Q510 66 486 138L462 209H229L209 150Q189 91 189 85Q189 72 209 59T259 46H264V0H255ZM447 255L345 557L244 256Q244 255 345 255H447Z">
+            </path>
+            <path stroke-width="0" id="E1169-MJMAIN-67"
+                d="M329 409Q373 453 429 453Q459 453 472 434T485 396Q485 382 476 371T449 360Q416 360 412 390Q410 404 415 411Q415 412 416 414V415Q388 412 363 393Q355 388 355 386Q355 385 359 381T368 369T379 351T388 325T392 292Q392 230 343 187T222 143Q172 143 123 171Q112 153 112 133Q112 98 138 81Q147 75 155 75T227 73Q311 72 335 67Q396 58 431 26Q470 -13 470 -72Q470 -139 392 -175Q332 -206 250 -206Q167 -206 107 -175Q29 -140 29 -75Q29 -39 50 -15T92 18L103 24Q67 55 67 108Q67 155 96 193Q52 237 52 292Q52 355 102 398T223 442Q274 442 318 416L329 409ZM299 343Q294 371 273 387T221 404Q192 404 171 388T145 343Q142 326 142 292Q142 248 149 227T179 192Q196 182 222 182Q244 182 260 189T283 207T294 227T299 242Q302 258 302 292T299 343ZM403 -75Q403 -50 389 -34T348 -11T299 -2T245 0H218Q151 0 138 -6Q118 -15 107 -34T95 -74Q95 -84 101 -97T122 -127T170 -155T250 -167Q319 -167 361 -139T403 -75Z">
+            </path>
+            <path stroke-width="0" id="E1169-MJMAIN-6C"
+                d="M42 46H56Q95 46 103 60V68Q103 77 103 91T103 124T104 167T104 217T104 272T104 329Q104 366 104 407T104 482T104 542T103 586T103 603Q100 622 89 628T44 637H26V660Q26 683 28 683L38 684Q48 685 67 686T104 688Q121 689 141 690T171 693T182 694H185V379Q185 62 186 60Q190 52 198 49Q219 46 247 46H263V0H255L232 1Q209 2 183 2T145 3T107 3T57 1L34 0H26V46H42Z">
+            </path>
+            <path stroke-width="0" id="E1169-MJMAIN-5D" d="M22 710V750H159V-250H22V-210H119V710H22Z"></path>
+            <path stroke-width="0" id="E1169-MJMAIN-59"
+                d="M518 0Q497 3 374 3Q253 3 232 0H221V46H254Q313 47 321 58Q324 62 324 167V273L221 446Q117 620 114 623Q106 631 91 634T31 637H11V683H20Q29 680 148 680Q273 680 294 683H305V637H287Q239 636 236 621Q236 619 321 475L407 332L483 460Q502 492 527 534Q563 594 563 604Q563 632 517 637H508V683H517H525Q533 683 545 683T571 682T600 681T626 681Q695 681 731 683H738V637H723Q640 633 613 588Q612 587 517 427L425 273V169V95Q425 66 428 59T444 49Q459 46 506 46H528V0H518Z">
+            </path>
+            <path stroke-width="0" id="E1169-MJMAIN-39"
+                d="M352 287Q304 211 232 211Q154 211 104 270T44 396Q42 412 42 436V444Q42 537 111 606Q171 666 243 666Q245 666 249 666T257 665H261Q273 665 286 663T323 651T370 619T413 560Q456 472 456 334Q456 194 396 97Q361 41 312 10T208 -22Q147 -22 108 7T68 93T121 149Q143 149 158 135T173 96Q173 78 164 65T148 49T135 44L131 43Q131 41 138 37T164 27T206 22H212Q272 22 313 86Q352 142 352 280V287ZM244 248Q292 248 321 297T351 430Q351 508 343 542Q341 552 337 562T323 588T293 615T246 625Q208 625 181 598Q160 576 154 546T147 441Q147 358 152 329T172 282Q197 248 244 248Z">
+            </path>
+        </defs>
+        <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)">
+            <use xlink:href="#E1169-MJMAIN-48" x="0" y="0"></use>
+            <g transform="translate(750,0)">
+                <g></g>
+                <g transform="translate(0,-150)">
+                    <g>
+                        <use transform="scale(0.707)" xlink:href="#E1169-MJMAIN-32" x="0" y="0"></use>
+                    </g>
+                </g>
+            </g>
+            <use xlink:href="#E1169-MJMAIN-4F" x="1203" y="0"></use>
+            <g transform="translate(2981,0)">
+                <use xlink:href="#E1169-MJMAIN-53" x="0" y="0"></use>
+                <use xlink:href="#E1169-MJMAIN-62" x="556" y="0"></use>
+                <g transform="translate(1112,0)">
+                    <g></g>
+                    <g transform="translate(0,-150)">
+                        <g>
+                            <use transform="scale(0.707)" xlink:href="#E1169-MJMAIN-32" x="0" y="0"></use>
+                        </g>
+                    </g>
+                </g>
+                <use xlink:href="#E1169-MJMAIN-4F" x="1565" y="0"></use>
+                <g transform="translate(2343,0)">
+                    <g></g>
+                    <g transform="translate(0,-150)">
+                        <g>
+                            <use transform="scale(0.707)" xlink:href="#E1169-MJMAIN-33" x="0" y="0"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g transform="translate(6778,0)">
+                <use xlink:href="#E1169-MJMAIN-48" x="0" y="0"></use>
+                <g transform="translate(750,0)">
+                    <g></g>
+                    <use transform="scale(0.707)" xlink:href="#E1169-MJMAIN-2B" x="0" y="583"></use>
+                </g>
+            </g>
+            <g transform="translate(9178,0)">
+                <use xlink:href="#E1169-MJMAIN-43" x="0" y="0"></use>
+                <use xlink:href="#E1169-MJMAIN-72" x="722" y="0"></use>
+                <use xlink:href="#E1169-MJMAIN-4F" x="1114" y="0"></use>
+                <g transform="translate(1892,0)">
+                    <g></g>
+                    <g transform="translate(0,-150)">
+                        <g>
+                            <use transform="scale(0.707)" xlink:href="#E1169-MJMAIN-34" x="0" y="0"></use>
+                        </g>
+                    </g>
+                </g>
+                <g transform="translate(2345,0)">
+                    <g></g>
+                    <g transform="translate(0,412)">
+                        <use transform="scale(0.707)" xlink:href="#E1169-MJMAIN-32" x="0" y="0"></use>
+                        <use transform="scale(0.707)" xlink:href="#E1169-MJMAIN-2212" x="500" y="0"></use>
+                    </g>
+                </g>
+            </g>
+            <g transform="translate(13528,0)">
+                <use xlink:href="#E1169-MJMAIN-5B" x="0" y="0"></use>
+                <g transform="translate(278,0)">
+                    <use xlink:href="#E1169-MJMAIN-41" x="0" y="0"></use>
+                    <use xlink:href="#E1169-MJMAIN-67" x="750" y="0"></use>
+                    <use xlink:href="#E1169-MJMAIN-43" x="1250" y="0"></use>
+                    <use xlink:href="#E1169-MJMAIN-6C" x="1972" y="0"></use>
+                </g>
+                <g transform="translate(2528,0)">
+                    <g></g>
+                    <g transform="translate(0,-150)">
+                        <g>
+                            <use transform="scale(0.707)" xlink:href="#E1169-MJMAIN-32" x="0" y="0"></use>
+                        </g>
+                    </g>
+                </g>
+                <use xlink:href="#E1169-MJMAIN-5D" x="2981" y="0"></use>
+                <g transform="translate(3259,0)">
+                    <g></g>
+                    <use transform="scale(0.707)" xlink:href="#E1169-MJMAIN-2212" x="0" y="583"></use>
+                </g>
+            </g>
+            <g transform="translate(18437,0)">
+                <use xlink:href="#E1169-MJMAIN-59" x="0" y="0"></use>
+                <g transform="translate(750,0)">
+                    <g></g>
+                    <g transform="translate(0,412)">
+                        <use transform="scale(0.707)" xlink:href="#E1169-MJMAIN-39"></use>
+                        <use transform="scale(0.707)" xlink:href="#E1169-MJMAIN-39" x="500" y="0"></use>
+                        <use transform="scale(0.707)" xlink:href="#E1169-MJMAIN-2B" x="1000" y="0"></use>
+                    </g>
+                </g>
+            </g>
+            <g transform="translate(21544,0)">
+                <use xlink:href="#E1169-MJMAIN-59" x="0" y="0"></use>
+                <g transform="translate(750,0)">
+                    <g></g>
+                    <g transform="translate(0,412)">
+                        <use transform="scale(0.707)" xlink:href="#E1169-MJMAIN-39"></use>
+                        <use transform="scale(0.707)" xlink:href="#E1169-MJMAIN-39" x="500" y="0"></use>
+                        <use transform="scale(0.707)" xlink:href="#E1169-MJMAIN-2B" x="1000" y="0"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </svg>
+</div>
+<h6>2.9.2.3 化学计量数</h6>
+<p>在化学环境中，计量数应与前面的大写字母使用<strong>空格</strong>分割，对于分数计量数，只需输入<code>1/2</code>即可显示$\frac{1}{2}$的效果，如特殊情况需要显示<code>1/2</code>格式，请用<code>( )</code>扩起。
+</p>
+<pre><code>\ce{2H2O}  \ce{0.5 H2O}  \ce{1/2H2O}  \ce{(1/2)H2O}  \ce{$n$ H2O}
+  </code></pre>
+<div>
+    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="46.709ex" height="3.209ex" viewBox="0 -936.9 20110.7 1381.8"
+        role="img" focusable="false" style="vertical-align: -1.033ex; max-width: 100%;">
+        <defs>
+            <path stroke-width="0" id="E1306-MJMAIN-32"
+                d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z">
+            </path>
+            <path stroke-width="0" id="E1306-MJMAIN-48"
+                d="M128 622Q121 629 117 631T101 634T58 637H25V683H36Q57 680 180 680Q315 680 324 683H335V637H302Q262 636 251 634T233 622L232 500V378H517V622Q510 629 506 631T490 634T447 637H414V683H425Q446 680 569 680Q704 680 713 683H724V637H691Q651 636 640 634T622 622V61Q628 51 639 49T691 46H724V0H713Q692 3 569 3Q434 3 425 0H414V46H447Q489 47 498 49T517 61V332H232V197L233 61Q239 51 250 49T302 46H335V0H324Q303 3 180 3Q45 3 36 0H25V46H58Q100 47 109 49T128 61V622Z">
+            </path>
+            <path stroke-width="0" id="E1306-MJMATHI-58"
+                d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z">
+            </path>
+            <path stroke-width="0" id="E1306-MJMAIN-4F"
+                d="M56 340Q56 423 86 494T164 610T270 680T388 705Q521 705 621 601T722 341Q722 260 693 191T617 75T510 4T388 -22T267 3T160 74T85 189T56 340ZM467 647Q426 665 388 665Q360 665 331 654T269 620T213 549T179 439Q174 411 174 354Q174 144 277 61Q327 20 385 20H389H391Q474 20 537 99Q603 188 603 354Q603 411 598 439Q577 592 467 647Z">
+            </path>
+            <path stroke-width="0" id="E1306-MJMAIN-30"
+                d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z">
+            </path>
+            <path stroke-width="0" id="E1306-MJMAIN-2E"
+                d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path>
+            <path stroke-width="0" id="E1306-MJMAIN-35"
+                d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z">
+            </path>
+            <path stroke-width="0" id="E1306-MJMAIN-31"
+                d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z">
+            </path>
+            <path stroke-width="0" id="E1306-MJMAIN-28"
+                d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z">
+            </path>
+            <path stroke-width="0" id="E1306-MJMAIN-2F"
+                d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z">
+            </path>
+            <path stroke-width="0" id="E1306-MJMAIN-29"
+                d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z">
+            </path>
+            <path stroke-width="0" id="E1306-MJMATHI-6E"
+                d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z">
+            </path>
+        </defs>
+        <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)">
+            <use xlink:href="#E1306-MJMAIN-32" x="0" y="0"></use>
+            <use xlink:href="#E1306-MJMAIN-48" x="666" y="0"></use>
+            <g transform="translate(1416,0)">
+                <g></g>
+                <g transform="translate(0,-150)">
+                    <g>
+                        <use transform="scale(0.707)" xlink:href="#E1306-MJMAIN-32" x="0" y="0"></use>
+                    </g>
+                </g>
+            </g>
+            <use xlink:href="#E1306-MJMAIN-4F" x="1870" y="0"></use>
+            <g transform="translate(3648,0)">
+                <use xlink:href="#E1306-MJMAIN-30"></use>
+                <use xlink:href="#E1306-MJMAIN-2E" x="500" y="0"></use>
+                <use xlink:href="#E1306-MJMAIN-35" x="778" y="0"></use>
+                <use xlink:href="#E1306-MJMAIN-48" x="1444" y="0"></use>
+                <g transform="translate(2194,0)">
+                    <g></g>
+                    <g transform="translate(0,-150)">
+                        <g>
+                            <use transform="scale(0.707)" xlink:href="#E1306-MJMAIN-32" x="0" y="0"></use>
+                        </g>
+                    </g>
+                </g>
+                <use xlink:href="#E1306-MJMAIN-4F" x="2648" y="0"></use>
+            </g>
+            <g transform="translate(8074,0)">
+                <g transform="translate(120,0)">
+                    <rect stroke="none" width="473" height="60" x="0" y="220"></rect>
+                    <use transform="scale(0.707)" xlink:href="#E1306-MJMAIN-31" x="84" y="568"></use>
+                    <use transform="scale(0.707)" xlink:href="#E1306-MJMAIN-32" x="84" y="-528"></use>
+                </g>
+                <use xlink:href="#E1306-MJMAIN-48" x="880" y="0"></use>
+                <g transform="translate(1630,0)">
+                    <g></g>
+                    <g transform="translate(0,-150)">
+                        <g>
+                            <use transform="scale(0.707)" xlink:href="#E1306-MJMAIN-32" x="0" y="0"></use>
+                        </g>
+                    </g>
+                </g>
+                <use xlink:href="#E1306-MJMAIN-4F" x="2083" y="0"></use>
+            </g>
+            <g transform="translate(11936,0)">
+                <use xlink:href="#E1306-MJMAIN-28" x="0" y="0"></use>
+                <use xlink:href="#E1306-MJMAIN-31" x="389" y="0"></use>
+                <use xlink:href="#E1306-MJMAIN-2F" x="889" y="0"></use>
+                <use xlink:href="#E1306-MJMAIN-32" x="1389" y="0"></use>
+                <use xlink:href="#E1306-MJMAIN-29" x="1889" y="0"></use>
+                <use xlink:href="#E1306-MJMAIN-48" x="2444" y="0"></use>
+                <g transform="translate(3194,0)">
+                    <g></g>
+                    <g transform="translate(0,-150)">
+                        <g>
+                            <use transform="scale(0.707)" xlink:href="#E1306-MJMAIN-32" x="0" y="0"></use>
+                        </g>
+                    </g>
+                </g>
+                <use xlink:href="#E1306-MJMAIN-4F" x="3648" y="0"></use>
+            </g>
+            <g transform="translate(17362,0)">
+                <use xlink:href="#E1306-MJMATHI-6E" x="0" y="0"></use>
+                <use xlink:href="#E1306-MJMAIN-48" x="766" y="0"></use>
+                <g transform="translate(1516,0)">
+                    <g></g>
+                    <g transform="translate(0,-150)">
+                        <g>
+                            <use transform="scale(0.707)" xlink:href="#E1306-MJMAIN-32" x="0" y="0"></use>
+                        </g>
+                    </g>
+                </g>
+                <use xlink:href="#E1306-MJMAIN-4F" x="1970" y="0"></use>
+            </g>
+        </g>
+    </svg>
+</div>
+<h6>2.9.2.4 同位素</h6>
+<pre><code>\ce{^{227}_{90}Th+}  \ce{^227_90Th+}  \ce{^{0}_{-1}n^{-}}  \ce{^0_-1n-}
+  </code></pre>
+<div>
+    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="32.979ex" height="3.209ex" viewBox="0 -986.1 14199.1 1381.8"
+        role="img" focusable="false" style="vertical-align: -0.919ex; margin-right: -0.469ex; max-width: 100%;">
+        <defs>
+            <path stroke-width="0" id="E1246-MJMATHI-58"
+                d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z">
+            </path>
+            <path stroke-width="0" id="E1246-MJMAIN-32"
+                d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z">
+            </path>
+            <path stroke-width="0" id="E1246-MJMAIN-37"
+                d="M55 458Q56 460 72 567L88 674Q88 676 108 676H128V672Q128 662 143 655T195 646T364 644H485V605L417 512Q408 500 387 472T360 435T339 403T319 367T305 330T292 284T284 230T278 162T275 80Q275 66 275 52T274 28V19Q270 2 255 -10T221 -22Q210 -22 200 -19T179 0T168 40Q168 198 265 368Q285 400 349 489L395 552H302Q128 552 119 546Q113 543 108 522T98 479L95 458V455H55V458Z">
+            </path>
+            <path stroke-width="0" id="E1246-MJMAIN-39"
+                d="M352 287Q304 211 232 211Q154 211 104 270T44 396Q42 412 42 436V444Q42 537 111 606Q171 666 243 666Q245 666 249 666T257 665H261Q273 665 286 663T323 651T370 619T413 560Q456 472 456 334Q456 194 396 97Q361 41 312 10T208 -22Q147 -22 108 7T68 93T121 149Q143 149 158 135T173 96Q173 78 164 65T148 49T135 44L131 43Q131 41 138 37T164 27T206 22H212Q272 22 313 86Q352 142 352 280V287ZM244 248Q292 248 321 297T351 430Q351 508 343 542Q341 552 337 562T323 588T293 615T246 625Q208 625 181 598Q160 576 154 546T147 441Q147 358 152 329T172 282Q197 248 244 248Z">
+            </path>
+            <path stroke-width="0" id="E1246-MJMAIN-30"
+                d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z">
+            </path>
+            <path stroke-width="0" id="E1246-MJMAIN-54"
+                d="M36 443Q37 448 46 558T55 671V677H666V671Q667 666 676 556T685 443V437H645V443Q645 445 642 478T631 544T610 593Q593 614 555 625Q534 630 478 630H451H443Q417 630 414 618Q413 616 413 339V63Q420 53 439 50T528 46H558V0H545L361 3Q186 1 177 0H164V46H194Q264 46 283 49T309 63V339V550Q309 620 304 625T271 630H244H224Q154 630 119 601Q101 585 93 554T81 486T76 443V437H36V443Z">
+            </path>
+            <path stroke-width="0" id="E1246-MJMAIN-68"
+                d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 124T102 167T103 217T103 272T103 329Q103 366 103 407T103 482T102 542T102 586T102 603Q99 622 88 628T43 637H25V660Q25 683 27 683L37 684Q47 685 66 686T103 688Q120 689 140 690T170 693T181 694H184V367Q244 442 328 442Q451 442 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z">
+            </path>
+            <path stroke-width="0" id="E1246-MJMAIN-2B"
+                d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z">
+            </path>
+            <path stroke-width="0" id="E1246-MJMAIN-2212"
+                d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path>
+            <path stroke-width="0" id="E1246-MJMAIN-31"
+                d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z">
+            </path>
+            <path stroke-width="0" id="E1246-MJMAIN-6E"
+                d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q450 438 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z">
+            </path>
+        </defs>
+        <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)">
+            <g></g>
+            <g transform="translate(0,409)">
+                <g></g>
+            </g>
+            <g transform="translate(0,-248)">
+                <g></g>
+            </g>
+            <g transform="translate(1160,0)">
+                <g></g>
+                <g transform="translate(0,409)">
+                    <g>
+                        <g></g>
+                    </g>
+                    <g>
+                        <g transform="translate(-1061,0)">
+                            <use transform="scale(0.707)" xlink:href="#E1246-MJMAIN-32"></use>
+                            <use transform="scale(0.707)" xlink:href="#E1246-MJMAIN-32" x="500" y="0"></use>
+                            <use transform="scale(0.707)" xlink:href="#E1246-MJMAIN-37" x="1000" y="0"></use>
+                        </g>
+                    </g>
+                </g>
+                <g transform="translate(0,-257)">
+                    <g></g>
+                    <g>
+                        <g transform="translate(-708,0)">
+                            <g>
+                                <use transform="scale(0.707)" xlink:href="#E1246-MJMAIN-39"></use>
+                                <use transform="scale(0.707)" xlink:href="#E1246-MJMAIN-30" x="500" y="0"></use>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g transform="translate(1260,0)">
+                <use xlink:href="#E1246-MJMAIN-54" x="0" y="0"></use>
+                <use xlink:href="#E1246-MJMAIN-68" x="722" y="0"></use>
+            </g>
+            <g transform="translate(2538,0)">
+                <g></g>
+                <use transform="scale(0.707)" xlink:href="#E1246-MJMAIN-2B" x="0" y="583"></use>
+            </g>
+            <g transform="translate(4188,0)">
+                <g></g>
+                <g transform="translate(0,409)">
+                    <g></g>
+                </g>
+                <g transform="translate(0,-248)">
+                    <g></g>
+                </g>
+                <g transform="translate(1160,0)">
+                    <g></g>
+                    <g transform="translate(0,409)">
+                        <g>
+                            <g></g>
+                        </g>
+                        <g>
+                            <g transform="translate(-1061,0)">
+                                <use transform="scale(0.707)" xlink:href="#E1246-MJMAIN-32"></use>
+                                <use transform="scale(0.707)" xlink:href="#E1246-MJMAIN-32" x="500" y="0"></use>
+                                <use transform="scale(0.707)" xlink:href="#E1246-MJMAIN-37" x="1000" y="0"></use>
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="translate(0,-257)">
+                        <g></g>
+                        <g>
+                            <g transform="translate(-708,0)">
+                                <g>
+                                    <use transform="scale(0.707)" xlink:href="#E1246-MJMAIN-39"></use>
+                                    <use transform="scale(0.707)" xlink:href="#E1246-MJMAIN-30" x="500" y="0"></use>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g transform="translate(1260,0)">
+                    <use xlink:href="#E1246-MJMAIN-54" x="0" y="0"></use>
+                    <use xlink:href="#E1246-MJMAIN-68" x="722" y="0"></use>
+                </g>
+                <g transform="translate(2538,0)">
+                    <g></g>
+                    <use transform="scale(0.707)" xlink:href="#E1246-MJMAIN-2B" x="0" y="583"></use>
+                </g>
+            </g>
+            <g transform="translate(8377,0)">
+                <g></g>
+                <g transform="translate(0,409)">
+                    <g></g>
+                </g>
+                <g transform="translate(0,-248)">
+                    <g></g>
+                </g>
+                <g transform="translate(1003,0)">
+                    <g></g>
+                    <g transform="translate(0,409)">
+                        <g>
+                            <g></g>
+                        </g>
+                        <g>
+                            <use transform="scale(0.707)" xlink:href="#E1246-MJMAIN-30" x="-500" y="0"></use>
+                        </g>
+                    </g>
+                    <g transform="translate(0,-257)">
+                        <g></g>
+                        <g>
+                            <g transform="translate(-904,0)">
+                                <g>
+                                    <use transform="scale(0.707)" xlink:href="#E1246-MJMAIN-2212" x="0" y="0"></use>
+                                    <use transform="scale(0.707)" xlink:href="#E1246-MJMAIN-31" x="778" y="0"></use>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <use xlink:href="#E1246-MJMAIN-6E" x="1103" y="0"></use>
+                <g transform="translate(1659,0)">
+                    <g></g>
+                    <use transform="scale(0.707)" xlink:href="#E1246-MJMAIN-2212" x="0" y="583"></use>
+                </g>
+            </g>
+            <g transform="translate(11687,0)">
+                <g></g>
+                <g transform="translate(0,409)">
+                    <g></g>
+                </g>
+                <g transform="translate(0,-248)">
+                    <g></g>
+                </g>
+                <g transform="translate(1003,0)">
+                    <g></g>
+                    <g transform="translate(0,409)">
+                        <g>
+                            <g></g>
+                        </g>
+                        <g>
+                            <use transform="scale(0.707)" xlink:href="#E1246-MJMAIN-30" x="-500" y="0"></use>
+                        </g>
+                    </g>
+                    <g transform="translate(0,-257)">
+                        <g></g>
+                        <g>
+                            <g transform="translate(-904,0)">
+                                <g>
+                                    <use transform="scale(0.707)" xlink:href="#E1246-MJMAIN-2212" x="0" y="0"></use>
+                                    <use transform="scale(0.707)" xlink:href="#E1246-MJMAIN-31" x="778" y="0"></use>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <use xlink:href="#E1246-MJMAIN-6E" x="1103" y="0"></use>
+                <g transform="translate(1659,0)">
+                    <g></g>
+                    <use transform="scale(0.707)" xlink:href="#E1246-MJMAIN-2212" x="0" y="583"></use>
+                </g>
+            </g>
+        </g>
+    </svg>
+</div>
+<p>在一个复杂的化学式中，上标属于左侧元素还是右侧元素可能并不会明显的体现出来，但为了规范输入，建议使用<code>{}</code>分隔符作为区分：</p>
+<pre><code>\ce{H{}^3HO}  \ce{H^3HO}
+  </code></pre>
+<div>$$ \ce{H{}^3HO} \quad \ce{H^3HO} $$</div>
+<h6>2.9.2.5 反应箭头</h6>
+<p>mhchem提供了方便的反应箭头输入模式</p>
+<pre><code>\ce{A -&gt; B}   \ce{A &lt;- B}  \ce{A &lt;-&gt; B} 
+  </code></pre>
+<div>$$ \ce{A -&gt; B} \quad \ce{A &lt;- B} \quad \ce{A &lt;-&gt; B} $$</div>
+<pre><code>\ce{A &lt;--&gt; B}  \ce{A &lt;=&gt; B}  \ce{A &lt;=&gt;&gt; B}  \ce{A &lt;&lt;=&gt; B}
+  </code></pre>
+<div>$$ \quad \ce{A &lt;--&gt; B} \quad \ce{A &lt;=&gt; B} \quad \ce{A &lt;=&gt;&gt; B} \quad \ce{A &lt;&lt;=&gt; B} $$
+</div>
+<p>箭头可以带有两个参数，即<code>&gt;[][]</code>，第一个<code>[]</code>表示上方参数，第二个<code>[]</code>表示下方参数</p>
+<pre><code>\ce{A -&gt;[H2O] B}   \ce{A -&gt;[{上方文字}][{下方文字}] B}
+  </code></pre>
+<div>$$ \ce{A -&gt;[H2O] B} \qquad \ce{A -&gt;[{上方文字}][{下方文字}] B} $$</div>
+<h6>2.9.2.6 气体和沉淀</h6>
+<p>在化学环境中可使用独立的<code>^</code>表示气体$\ce{^}$，使用独立的<code>v</code>(小写字母v)表示沉淀$\ce{v}$</p>
+<pre><code>\ce{SO4^2- + Ba^2+ -&gt; BaSO4 v}
+  </code></pre>
+<div>$$ \ce{SO4^2- + Ba^2+ -&gt; BaSO4 v} $$</div>
+<pre><code>\ce{A v B (v) -&gt; B ^ B (^)}
+  </code></pre>
+<div>$$ \ce{A v B (v) -&gt; B ^ B (^)} $$</div>
+<p>2.9.2.7 一些复杂的例子</p>
+<pre><code>\ce{Zn^2+  &lt;=&gt;[+ 2OH-][+ 2H+]  $\underset{\text{amphoteres Hydroxid}}{\ce{Zn(OH)2 v}}$  &lt;=&gt;[+ 2OH-][+ 2H+]  $\underset{\text{Hydroxozikat}}{\ce{[Zn(OH)4]^2-}}$}
+  </code></pre>
+<div>$$ \ce{Zn^2+ &lt;=&gt;[+ 2OH-][+ 2H+] $\underset{\text{amphoteres Hydroxid}}{\ce{Zn(OH)2 v}}$ &lt;=&gt;[+ 2OH-][+
+    2H+] $\underset{\text{Hydroxozikat}}{\ce{[Zn(OH)4]^2-}}$} $$</div>
+<pre><code>\ce{$K = \frac{[\ce{Hg^2+}][\ce{Hg}]}{[\ce{Hg2^2+}]}$}
+  </code></pre>
+<div>$$ \ce{$K = \frac{[\ce{Hg^2+}][\ce{Hg}]}{[\ce{Hg2^2+}]}$} $$</div>
+<pre><code>\ce{$K = \ce{\frac{[Hg^2+][Hg]}{[Hg2^2+]}}$}
+  </code></pre>
+<div>$$ \ce{$K = \ce{\frac{[Hg^2+][Hg]}{[Hg2^2+]}}$} $$</div>
+<pre><code>\ce{Hg^2+ -&gt;[I-]  $\underset{\mathrm{red}}{\ce{HgI2}}$  -&gt;[I-]  $\underset{\mathrm{red}}{\ce{[Hg^{II}I4]^2-}}$}
+  </code></pre>
+<div>$$ \ce{Hg^2+ -&gt;[I-] $\underset{\mathrm{red}}{\ce{HgI2}}$ -&gt;[I-]
+    $\underset{\mathrm{red}}{\ce{[Hg^{II}I4]^2-}}$} $$</div>
+<p>&nbsp;</p>
+<h5>2.9.3 cancel扩展包</h5>
+<p>cancel扩展包为显示分数中<strong>约分线</strong>的TeX宏包，或显示其他划除效果，基本命令为<code>\cancel{}</code>，例如：</p>
+<pre><code>\cfrac{x}{1 + \cfrac{\cancel{y}}{\cancel{y}}} = \cfrac{x}{2}
+  </code></pre>
+<!-- <div>$$ \cfrac{x}{1 + \cfrac{\cancel{y}}{\cancel{y}}} = \cfrac{x}{2} $$</div> -->
+<pre><code>\cancel{e^{i \pi} + 1 =0}
+  </code></pre>
+<div>$$ \require{cancel} \cancel{e^{i \pi} + 1 =0} $$</div>
+<p>&nbsp;</p>
+<h5>2.9.4 AMS扩展包</h5>
+<h5>2.9.5 Unicode扩展包</h5>
+<p>Unicode扩展包一款显示Unicode字符的TeX宏包，基本命令为<code>\unicode{}</code>，<code>{}</code>中参数应输入指定字符的<strong>十进制</strong>或<strong>十六进制</strong>Unicode代码，注意十六进制编码需在前面添加标识位<code>x</code>，例如：
+</p>
+<pre><code>\unicode{8751} \unicode{x220f}
+  </code></pre>
+<div>$$ \huge \unicode{8751}\qquad \unicode{x220f} $$</div>
+<p>更多Unicode代码查询，请点击<a href="www.baidu.com">此处</a></p>
+<p>&nbsp;</p>
+<h5>2.9.6 Bbox扩展包</h5>
+<p>Bbox扩展包一款用于设置公式背景颜色的TeX宏包，具体用法参见<a href="#273-用bbox扩展设置背景颜色-setting-background-color-with-bbox">2.7.3</a></p>
+<h5>2.9.7 NoErrors扩展包</h5>
+<p>NoErrors扩展包是一款阻止显示 TeX 错误消息的宏包，使用后将不会像是代码具体错误，而只会显示原始 TeX 代码。</p>
+<h5>2.9.8 NewCommand扩展包</h5>
+<p>Newcommand扩展包提供了\def, \newcommand，\renewcommand，\let，\newenvironment 和 \renewenvironment 宏命令，用于在 TeX中创建新的宏和环境。例如：</p>
+<pre><code>\def\RR{{\bf R}}
+  \RR
+  </code></pre>
+<div>$$ \def\RR{{\bf R}} \RR $$</div>
+<h3>3 关于 About</h3>
+<p>如有任何问题可以点击页面下方的邮箱图标向我们反馈，感谢您的使用！</p>
+<h3>4 参考文献 Reference</h3>
+<p>
+    <a class="br" href="http://47.104.179.138/">1. LaTeX公式编辑器</a>
+    <a class="br" href="https://docs.mathjax.org/en/latest/index.html" target="_blank">2. MathJax Documentation</a>
+    <a class="br" href="https://en.wikipedia.org/wiki/Help:Displaying_a_formula" target="_blank">3. Displaying a
+        formula</a>
+    <a class="br" href="https://github.com/mathjax/MathJax" target="_blank">4. mathjax/MathJax: Beautiful math in all
+        browsers - GitHub</a>
+    <a class="br" href="https://mhchem.github.io/MathJax-mhchem/" target="_blank">5. mhchem for MathJax</a>
+</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>

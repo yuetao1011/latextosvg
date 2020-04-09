@@ -1,0 +1,302 @@
+@charset "UTF-8";
+/**
+ * @Copyright: Copyright © 2019
+ * @Created on 2019-12-22
+ * @Author:Panda_YueTao
+ * @Version 1.15
+ * @Title: 妈叔出品-LaTeX公式编辑器样式表
+ */
+
+/* #region 媒体查询 */
+@media screen and (max-width: 279px) {
+  .container {
+    padding: 0;
+  }
+  .area {
+    width: 278px;
+    padding: 0;
+  }
+  .area .card {
+    width: 100%;
+    border-width: 1px 0 1px 0;
+    border-radius: 0;
+  }
+}
+@media screen and (min-width: 280px) and (max-width: 349px) {
+  .container {
+    padding: 0;
+  }
+  .area {
+    width: 100%;
+    padding: 0;
+  }
+  .area .card {
+    width: 100%;
+    border-width: 1px 0 1px 0;
+    border-radius: 0;
+  }
+}
+@media screen and (min-width: 350px) and (max-width: 575px) {
+  .container {
+    padding: 0;
+  }
+  .area {
+    width: 100%;
+    padding: 0;
+  }
+  .area .card {
+    width: 100%;
+    border-width: 1px 0 1px 0;
+    border-radius: 0;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+}
+@media screen and (min-width: 1200px) {
+}
+/* #endregion */
+
+/* #region 全局 */
+html {
+  zoom: 0.9;
+  height: 100%;
+}
+body {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/* #endregion */
+
+/* #region 字体图标向左偏移 */
+i {
+  margin: auto 0.4rem auto 0.1rem;
+}
+/* #endregion */
+
+/* #region 禁用bootstrap焦点时边框高亮样式 */
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #ced4da;
+  outline: 0;
+  box-shadow: 0 0 0 0rem rgba(0, 123, 255, 0.25);
+}
+/* #endregion */
+
+/* #region 页眉页脚容器 */
+.full {
+  padding: 1rem;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  min-width: 278px;
+}
+/* #endregion */
+
+/* #region 区域 */
+.area {
+  margin-top: 2rem;
+}
+.area h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+.area h2 span {
+  margin: auto auto auto 0.5rem;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.area h3 {
+  font-size: 1.2rem;
+}
+.area .card-header {
+  padding: 0.4rem 1rem;
+  margin-bottom: -0.1rem;
+}
+
+/* #endregion*/
+
+/* #region 页眉 */
+#header h1 {
+  font-size: 2.8rem;
+}
+#header .sectitle {
+  font-size: 1.4rem;
+  margin-left: -15px;
+}
+#header .row {
+  margin: 0;
+}
+#header .wrap-btn {
+  position: relative;
+  padding: 0;
+}
+/* 设置和帮助按钮 */
+#header .wrap-btn button {
+  float: right;
+  margin-left: 1rem;
+}
+/* 设置菜单 */
+.setting p {
+  font-size: 1rem;
+  margin: 0;
+}
+/* 选择框容器(行间距) */
+.setting .form-check {
+  margin: 0.3rem auto 0.3rem 0;
+}
+
+/* #endregion*/
+
+/* #region 输入容器 */
+#input-area h2 i {
+  position: relative;
+  top: 1px;
+}
+#control-bar {
+  margin: 2rem -0.3rem 0.3rem -0.3rem;
+}
+#control-bar button {
+  margin: auto 0.3rem auto 0.3rem;
+  font-size: 0.7rem;
+}
+.wrap-control {
+  display: inline-block;
+}
+.wrap-control .btn {
+  display: block;
+}
+
+textarea.form-control {
+  font-size: 1.2rem;
+}
+/* #endregion */
+
+/* #region 输出容器 */
+.output {
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 2rem auto 1.5rem auto;
+  text-align: center;
+}
+.output img {
+  opacity: 0.3;
+  width: 25%;
+}
+.scroll-formac::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+.scroll-formac::-webkit-scrollbar-thumb:horizontal {
+  background-color: #a6a6a6;
+  border-radius: 3px;
+}
+.scroll-formac::-webkit-scrollbar-track-piece:horizontal:decrement,
+.scroll-formac::-webkit-scrollbar-track-piece:horizontal:increment {
+  background-color: rgba(166, 166, 166, 0.2);
+}
+/* #endregion*/
+
+/* #region mathjax元素 */
+.MathJax,
+.MathJax_Display {
+  font-size: 200% !important;
+}
+.readme .MathJax,
+.readme .MathJax_Display {
+  font-size: 120% !important;
+}
+/* #endregion */
+
+/* #region 说明文档 */
+
+.readme {
+  padding: 1rem;
+  overflow-x: hidden;
+}
+.readme h2,
+h3,
+h4,
+h5 {
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+.readme p {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+.readme pre {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 0.8rem;
+  font-size: 1rem;
+}
+.readme code {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.readme pre code {
+  background-color: rgba(0, 0, 0, 0);
+}
+.readme table {
+  /* width: 100%; */
+  margin-bottom: 1rem;
+  color: #212529;
+  border: 1px solid #dee2e6;
+  border-radius: 1px;
+  table-layout: fixed;
+}
+.readme th,
+.readme td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+  border: 1px solid #dee2e6;
+  /* white-space: nowrap; */
+  word-break: break-all;
+}
+.readme thead th,
+.readme thead td {
+  border-bottom-width: 2px;
+}
+.readme thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+.readme tbody + tbody {
+  border-top: 2px solid #dee2e6;
+}
+.readme tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.readme .c {
+  text-align: center;
+}
+.readme .l {
+  text-align: left;
+}
+.readme .r {
+  text-align: right;
+}
+#toc-doc {
+  margin: 1.5rem auto 3rem auto;
+}
+.readme a.br {
+  display: block;
+}
+
+/* #endregion */
+
+/* #region tab标签 */
+.nav-item .nav-link {
+  color: rgba(0, 0, 0, 0.7);
+}
+.nav-item .nav-link.active {
+  color: rgba(0, 0, 0, 0.9);
+}
+/* #endregion */
